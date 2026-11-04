@@ -13,9 +13,9 @@ body{background:radial-gradient(1200px at 0% 0%,rgba(168,85,247,.18),transparent
 .header h1{font-family:'Space Grotesk';font-size:18px;font-weight:700}
 .tabs{display:flex;gap:8px;overflow-x:auto;background:rgba(0,0,0,.4);padding:8px;border-radius:16px;margin:16px 0;border:1px solid rgba(168,85,247,.12)}
 .tabs::-webkit-scrollbar{display:none}
-.tabs button{min-width:130px;padding:11px 14px;border-radius:12px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.06);color:#9ca3af;font-weight:700;font-size:12px;cursor:pointer}
+.tabs button{min-width:130px;padding:11px 14px;border-radius:12px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.06);color:#9ca3af;font-weight:700;font-size:12px;cursor:pointer;white-space:nowrap}
 .tabs button.active{background:#fff;color:#000;border-color:#fff}
-.card{background:rgba(18,10,35,.9);border:1px solid rgba(168,85,247,.15);border-radius:20px;padding:20px;margin:14px 0;display:none}
+.card{background:rgba(18,10,35,.92);border:1px solid rgba(168,85,247,.15);border-radius:20px;padding:20px;margin:14px 0;display:none;backdrop-filter:blur(20px)}
 .card.active{display:block}
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px}
@@ -51,7 +51,7 @@ button.btn{padding:13px 18px;border-radius:12px;border:0;width:100%;font-weight:
 
 <div class="header">
 <h1>⚡ ViralEdit</h1>
-<div style="font-size:11px;color:#9ca3af">Motor 3D Inteligente</div>
+<div style="font-size:11px;color:#9ca3af">Motor 3D Inteligente • Cada vídeo seu estilo</div>
 </div>
 
 <div class="tabs">
@@ -65,17 +65,17 @@ button.btn{padding:13px 18px;border-radius:12px;border:0;width:100%;font-weight:
 
 <div id="tab-videoia" class="card active">
 <b style="font-family:'Space Grotesk';font-size:15px">Gerador de Vídeo</b>
-<label>Prompt - descreva seu estilo (cinematic, 4K, neon, natural, documentary)</label>
-<textarea id="videoPrompt" style="height:110px">A white PS5 DualSense controller levitating and slowly rotating 360 degrees in ultra luxury modern apartment with blue neon lighting, cinematic volumetric lighting, ultra realistic, 8k, floating, shadow, product shot</textarea>
+<label>Prompt - descreva seu estilo (cinematic, 4K, neon, natural, documentary, golden hour, no neon)</label>
+<textarea id="videoPrompt" style="height:115px">Majestic male lion with thick mane walking slowly across African savanna at golden hour, warm natural sunlight, dust particles in air, acacia trees in background, National Geographic documentary style, cinematic, ultra realistic, 8k, natural lighting, slow motion, no neon, warm glow</textarea>
 <div class="grid3">
 <div><label>Modelo</label><select id="videoModel"><option value="wan-inteligente">Wan Inteligente - Lê seu estilo</option></select></div>
-<div><label>Proporção</label><select id="videoAspect"><option value="1:1" selected>1:1</option><option value="9:16">9:16</option><option value="16:9">16:9</option></select></div>
+<div><label>Proporção</label><select id="videoAspect"><option value="1:1">1:1</option><option value="9:16" selected>9:16 TikTok</option><option value="16:9">16:9 YouTube</option></select></div>
 <div><label>Duração</label><select id="videoDuration"><option value="5">5s</option><option value="8" selected>8s</option><option value="10">10s</option></select></div>
 </div>
 <div style="display:flex;justify-content:space-between;align-items:center;background:rgba(255,255,255,.04);padding:10px 14px;border-radius:10px;margin:10px 0;cursor:pointer" onclick="openConfigModal()"><div style="font-size:12px;font-weight:700">⚙️ Configurações</div><span id="configSummary" style="font-size:11px;color:#9ca3af">8s, 1:1 ›</span></div>
 <button class="btn teal" onclick="gerarVideoIA()">Gerar Vídeo</button>
 <button class="btn dark" onclick="gerarCuriosidadesAleatorias()">Prompts Aleatórios</button>
-<div id="videoIAStatus" class="small">Pronto. O motor lê seu prompt: se escrever neon = com neon, se escrever cinematic 4K natural = sem neon, luz natural.</div>
+<div id="videoIAStatus" class="small">Pronto. Motor inteligente: se escrever "neon" = com neon, se escrever "cinematic 4K natural no neon" = sem neon, luz natural.</div>
 <div class="progress"><div id="videoProgress"></div></div>
 <div id="videoIAResult"></div>
 <div style="height:1px;background:rgba(168,85,247,.15);margin:14px 0"></div>
@@ -85,7 +85,7 @@ button.btn{padding:13px 18px;border-radius:12px;border:0;width:100%;font-weight:
 
 <div id="tab-texto" class="card">
 <b>Texto → Vídeo</b>
-<textarea id="dreaminaPrompt" style="height:100px" placeholder="Ex: Extreme close-up of octopus, deep ocean natural light, National Geographic documentary, cinematic 4k, no neon"></textarea>
+<textarea id="dreaminaPrompt" style="height:100px" placeholder="Ex: Majestic lion walking in savanna at golden hour, National Geographic documentary, cinematic 4k natural light, no neon"></textarea>
 <div style="display:flex;justify-content:space-between;background:rgba(255,255,255,.04);padding:10px 14px;border-radius:10px;margin:10px 0;cursor:pointer" onclick="openConfigModal()"><div style="font-size:12px;font-weight:700">⚙️ Configurações</div><span id="configSummary2" style="font-size:11px;color:#9ca3af">8s, 1:1 ›</span></div>
 <button class="btn teal" onclick="gerarDreamina()">Gerar</button>
 <div id="dreaminaStatus" class="small">Descreva seu estilo no prompt.</div>
@@ -95,19 +95,20 @@ button.btn{padding:13px 18px;border-radius:12px;border:0;width:100%;font-weight:
 <div id="tab-roteiro" class="card">
 <b>Roteiro → Vídeo</b>
 <label>Cada linha = uma cena com seu próprio estilo</label>
-<textarea id="roteiro" style="height:120px">PS5 controller floating in modern apartment with blue neon lighting, cinematic, 8k, product shot
-Extreme close-up of giant octopus changing colors, deep ocean natural light, National Geographic documentary, cinematic 4k, no neon
-Human brain glowing with electric neurons, dark background, particles, cinematic sci-fi, purple glow, 8k
-Golden honey jar dripping, golden hour warm natural light, macro, hyperrealistic, warm glow, no neon</textarea>
+<textarea id="roteiro" style="height:130px">Majestic male lion with thick mane walking slowly across African savanna at golden hour, warm natural sunlight, National Geographic documentary, cinematic 8k, natural light, no neon, warm glow
+A white PS5 DualSense controller levitating and rotating 360 in ultra luxury modern apartment with blue neon lighting, cinematic volumetric lighting, ultra realistic, 8k, floating, shadow, product shot
+Extreme close-up of a giant octopus changing colors, deep ocean natural bioluminescent lighting, National Geographic documentary, cinematic 4k, natural light, slow motion, no neon
+Human brain glowing with electric purple neurons firing, dark background, particles of light, cinematic sci-fi, volumetric purple lighting, 8k, no neon
+Golden honey jar dripping slowly, golden hour warm natural lighting, macro, hyperrealistic, cinematic 4k, warm glow, no neon</textarea>
 <button class="btn purple" onclick="gerarVideoPorRoteiro()">Gerar Cenas</button>
-<div id="roteiroStatus" class="small">Cada cena respeita seu estilo: PS5 com neon, polvo sem neon natural, cérebro roxo, mel dourado.</div>
+<div id="roteiroStatus" class="small">Cada cena respeita seu estilo: leão savana dourada natural, PS5 apartamento moderno com neon, polvo oceano natural, cérebro roxo, mel dourado.</div>
 <div id="roteiroCenas"></div>
 </div>
 
 <div id="tab-voz" class="card">
 <b>Voz Humana</b>
 <label>Texto (máx 800 caracteres)</label>
-<textarea id="tts" style="height:80px">Você sabia que polvos têm 3 corações e que o sangue deles é azul? Comenta EU QUERO!</textarea>
+<textarea id="tts" style="height:80px">Você sabia que leões podem rugir a 8 quilômetros de distância? Comenta EU QUERO!</textarea>
 <div class="grid2">
 <div><label>Voz</label><select id="voice"><option value="pt-BR-AntonioNeural">Antonio - MrBeast BR</option><option value="pt-BR-FranciscaNeural">Francisca - TikTok Jovem</option><option value="pt-BR-BrendaNeural">Brenda</option><option value="pt-BR-FabioNeural">Fabio</option></select></div>
 <div><label>Velocidade</label><select id="voiceRate"><option value="+0%">Normal</option><option value="+10%">+10% Rápido</option><option value="+20%">+20% Viral</option></select></div>
@@ -124,7 +125,7 @@ Golden honey jar dripping, golden hour warm natural light, macro, hyperrealistic
 <button class="btn dark" onclick="setLeg('mrbeast')">MrBeast Amarela</button><button class="btn dark" onclick="setLeg('tiktok')">TikTok Branca</button><button class="btn dark" onclick="setLeg('emoji')">Emoji Pop</button><button class="btn dark" onclick="setLeg('bold')">Bold Impact</button><button class="btn dark" onclick="setLeg('neon')">Neon Glow</button><button class="btn dark" onclick="setLeg('minimal')">Minimal</button>
 </div>
 <div id="legPreview" class="legPreview"><span style="background:#facc15;color:#000;font-weight:900;padding:14px 24px;border-radius:12px;font-size:28px;border:3px solid #000">VOCÊ SABIA? 🔥</span></div>
-<textarea id="legText" style="height:70px">VOCÊ SABIA? 🔥 POLVOS TÊM 3 CORAÇÕES 💙 E SANGUE AZUL 🤯 COMENTA EU QUERO</textarea>
+<textarea id="legText" style="height:70px">VOCÊ SABIA? 🔥 LEÕES RUGEM A 8KM 🤯 COMENTA EU QUERO</textarea>
 </div>
 
 <div id="tab-export" class="card">
@@ -143,7 +144,7 @@ Golden honey jar dripping, golden hour warm natural light, macro, hyperrealistic
 <div class="modal-box">
 <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px"><b>Configurações</b><span style="font-size:22px;cursor:pointer;background:rgba(255,255,255,.08);width:32px;height:32px;display:grid;place-items:center;border-radius:8px" onclick="closeConfigModal()">×</span></div>
 <div><b id="durLabel" style="font-size:13px">Duração 8s</b><input type="range" id="durSlider" min="5" max="15" value="8" style="width:100%;margin:10px 0;accent-color:#fff" oninput="updateDur(this.value)"></div>
-<div style="margin-top:14px"><b style="font-size:13px">Resolução</b><div class="grid2" style="margin-top:8px"><button class="resBtn active" id="res480" onclick="setRes('480p')">480p</button><button class="resBtn" id="res720" onclick="setRes('720p')">720p</button></div></div>
+<div style="margin-top:14px"><b style="font-size:13px">Resolução</b><div class="grid2" style="margin-top:8px"><button class="resBtn active" id="res480" onclick="setRes('480p')">480p Rápido</button><button class="resBtn" id="res720" onclick="setRes('720p')">720p HD</button></div></div>
 <div style="margin-top:14px"><b style="font-size:13px">Proporção</b><div class="grid6" style="margin-top:8px">
 <div class="aspectBtn active" data-ratio="1:1" onclick="setAspect('1:1',this)"><span class="icon"></span><div style="font-size:11px">1:1</div></div>
 <div class="aspectBtn" data-ratio="9:16" onclick="setAspect('9:16',this)"><span class="icon"></span><div style="font-size:11px">9:16</div></div>
@@ -152,7 +153,7 @@ Golden honey jar dripping, golden hour warm natural light, macro, hyperrealistic
 <div class="aspectBtn" data-ratio="3:4" onclick="setAspect('3:4',this)"><span class="icon"></span><div style="font-size:11px">3:4</div></div>
 <div class="aspectBtn" data-ratio="21:9" onclick="setAspect('21:9',this)"><span class="icon"></span><div style="font-size:11px">21:9</div></div>
 </div></div>
-<div class="small" style="margin-top:14px">Motor inteligente: lê seu prompt. Escreva "neon" = com neon. Escreva "natural", "documentary", "cinematic 4k" = sem neon, luz natural/cinematográfica.</div>
+<div class="small" style="margin-top:14px">Motor inteligente lê seu prompt. Escreva "neon" = com neon azul. Escreva "natural, documentary, cinematic 4k, golden hour, no neon" = sem neon, luz natural cinematográfica quente.</div>
 <button class="btn teal" style="margin-top:14px" onclick="closeConfigModal()">Salvar</button>
 </div>
 </div>
@@ -176,94 +177,155 @@ window.setGen=(g,el)=>{config.gen=g; el.parentElement.querySelectorAll('.resBtn'
 
 window.gerarCuriosidadesAleatorias=()=>{
  const p=[
+  "Majestic male lion with thick mane walking slowly across African savanna at golden hour, warm natural sunlight, dust particles, acacia trees, National Geographic documentary, cinematic, 8k, natural light, slow motion, no neon, warm glow",
   "A white PS5 DualSense controller levitating and rotating 360 in ultra luxury modern apartment with blue neon lighting, cinematic volumetric lighting, ultra realistic, 8k, floating, shadow",
-  "Extreme close-up of a giant octopus changing colors, deep ocean natural bioluminescent lighting, National Geographic documentary style, cinematic, 8k realistic, natural light, slow motion, no neon",
+  "Extreme close-up of a giant octopus changing colors, deep ocean natural bioluminescent lighting, National Geographic documentary, cinematic 4k, natural light, no neon",
   "Human brain glowing with electric purple neurons firing, dark background, particles of light, cinematic sci-fi, volumetric purple lighting, 8k",
-  "Ancient jar of golden honey dripping slowly, golden hour warm natural lighting, macro shot, hyperrealistic, cinematic 4k, warm glow, no neon"
+  "Golden honey jar dripping slowly, golden hour warm natural lighting, macro, hyperrealistic, cinematic 4k, warm glow, no neon"
  ];
  document.getElementById('videoPrompt').value=p[Math.floor(Math.random()*p.length)];
  gerarVideoIA();
 };
 
-// MOTOR INTELIGENTE LIMPO - CADA VIDEO SEU ESTILO
+// MOTOR V34 COMPLETO REVISADO - CADA VÍDEO SEU ESTILO + LEÃO + PS5
 window.gerarVideoIA=async()=>{
  const prompt=document.getElementById('videoPrompt').value.trim();
  const aspect=document.getElementById('videoAspect').value;
  const duration=document.getElementById('videoDuration').value;
  if(!prompt) return alert('Escreva o prompt');
  const status=document.getElementById('videoIAStatus'); const result=document.getElementById('videoIAResult'); const progress=document.getElementById('videoProgress');
- status.innerHTML=`Gerando... "${prompt.substring(0,60)}..."`;
+ status.innerHTML=`🧠 Lendo estilo... "${prompt.substring(0,70)}..."`;
  progress.style.width='15%'; result.innerHTML='';
  try{
   const lower=prompt.toLowerCase();
-  let imgUrl='https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?w=1080';
-  let bgUrl='https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1920';
-  let keywords='ps5'; let lightStyle='neon'; let filterStyle='blur(2px) brightness(0.7)';
-  if(lower.includes('octopus')||lower.includes('polvo')){imgUrl='https://images.unsplash.com/photo-1545671913-b89ac1b4ac10?w=1080'; bgUrl='https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1920'; keywords='octopus'; lightStyle='natural'; filterStyle='blur(1px) brightness(0.85)';}
-  else if(lower.includes('brain')||lower.includes('cérebro')){imgUrl='https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=1080'; bgUrl='https://images.unsplash.com/photo-1518709594023-6eab9bab7b23?w=1920'; keywords='brain'; lightStyle='purple'; filterStyle='blur(0px) brightness(0.9)';}
-  else if(lower.includes('space')||lower.includes('espaço')){imgUrl='https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1080'; bgUrl='https://images.unsplash.com/photo-1446776877081-d282a0f896e2?w=1920'; keywords='space'; lightStyle='natural'; filterStyle='blur(0px) brightness(1.0)';}
-  else if(lower.includes('honey')||lower.includes('mel')){imgUrl='https://images.unsplash.com/photo-1587049352851-8d4e89133924?w=1080'; bgUrl='https://images.unsplash.com/photo-1501854140801-50d01698950b?w=1920'; keywords='honey'; lightStyle='golden'; filterStyle='blur(1px) brightness(0.95)';}
+  // VALORES PADRÃO
+  let imgUrl='https://images.unsplash.com/photo-1546182990-dffeafbe841d?w=1080'; // leão por padrão agora
+  let bgUrl='https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=1920'; // savana por padrão
+  let keywords='lion savanna'; let lightStyle='natural golden'; let filterStyle='blur(0px) brightness(0.92) contrast(1.15)';
 
-  let hasNeon=false; let vignette=0.3; let lightColor='rgba(0,0,0,0)'; let shadowColor='rgba(0,0,0,0)';
-  if(lower.includes('neon')){hasNeon=true; vignette=0.45; lightColor='rgba(0,229,204,0.45)'; shadowColor='#00E5CC'; lightStyle='neon';}
-  else if(lower.includes('cinematic')||lower.includes('cinematográfico')){lightColor='rgba(255,140,0,0.15)'; vignette=0.35; shadowColor='rgba(255,140,0,0.3)'; if(!lightStyle.includes('natural')) lightStyle='cinematic';}
-  else if(lower.includes('documentary')||lower.includes('natural')||lower.includes('no neon')){lightColor='rgba(0,0,0,0)'; vignette=0.15; shadowColor='rgba(0,0,0,0.2)'; lightStyle='natural';}
-  else if(lower.includes('golden')||lower.includes('warm')){lightColor='rgba(255,200,0,0.15)'; vignette=0.2; shadowColor='rgba(255,180,0,0.3)'; lightStyle='golden';}
-  else if(lower.includes('purple')||lower.includes('roxo')){lightColor='rgba(168,85,247,0.2)'; vignette=0.4; shadowColor='#a855f7'; lightStyle='purple';}
+  // DETECÇÃO INTELIGENTE POR PROMPT - LINHA A LINHA REVISADO
+  if(lower.includes('lion') || lower.includes('leão') || lower.includes('leao') || lower.includes('savanna') || lower.includes('savana')){
+    imgUrl='https://images.unsplash.com/photo-1546182990-dffeafbe841d?w=1080'; // leão majestoso macho
+    bgUrl='https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=1920'; // savana africana golden hour
+    keywords='lion savanna golden hour natural'; lightStyle='natural golden'; filterStyle='blur(0px) brightness(0.92) contrast(1.15) sepia(0.1)';
+  } else if(lower.includes('ps5') || lower.includes('controller') || lower.includes('controle') || lower.includes('dualshock') || lower.includes('dual sense')){
+    imgUrl='https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?w=1080'; // controle PS5 branco
+    bgUrl='https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1920'; // apartamento moderno luxo
+    keywords='ps5 modern apartment neon'; lightStyle='neon blue'; filterStyle='blur(1.5px) brightness(0.75) contrast(1.2)';
+  } else if(lower.includes('octopus')||lower.includes('polvo')){
+    imgUrl='https://images.unsplash.com/photo-1545671913-b89ac1b4ac10?w=1080'; bgUrl='https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1920'; keywords='octopus ocean documentary natural'; lightStyle='natural blue'; filterStyle='blur(1px) brightness(0.85)';
+  } else if(lower.includes('brain')||lower.includes('cérebro')||lower.includes('cerebro')||lower.includes('neuron')){
+    imgUrl='https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=1080'; bgUrl='https://images.unsplash.com/photo-1518709594023-6eab9bab7b23?w=1920'; keywords='brain neurons cinematic purple'; lightStyle='purple cinematic'; filterStyle='blur(0px) brightness(0.9) contrast(1.2)';
+  } else if(lower.includes('space')||lower.includes('espaço')||lower.includes('astronaut')){
+    imgUrl='https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1080'; bgUrl='https://images.unsplash.com/photo-1446776877081-d282a0f896e2?w=1920'; keywords='space astronaut natural'; lightStyle='natural space'; filterStyle='blur(0px) brightness(1.0)';
+  } else if(lower.includes('honey')||lower.includes('mel')){
+    imgUrl='https://images.unsplash.com/photo-1587049352851-8d4e89133924?w=1080'; bgUrl='https://images.unsplash.com/photo-1501854140801-50d01698950b?w=1920'; keywords='honey golden natural'; lightStyle='golden warm'; filterStyle='blur(1px) brightness(0.95) sepia(0.15)';
+  }
+
+  // DECIDE LUZ BASEADO NO QUE VOCÊ ESCREVEU - SEM NEON FIXO
+  let hasNeon=false; let vignette=0.25; let lightColor='rgba(0,0,0,0)'; let shadowColor='rgba(0,0,0,0.3)';
+  if(lower.includes('neon')){
+    hasNeon=true; vignette=0.45; lightColor='rgba(0,229,204,0.45)'; shadowColor='#00E5CC'; lightStyle='neon blue';
+  } else if(lower.includes('no neon') || lower.includes('sem neon') || lower.includes('natural') || lower.includes('documentary') || lower.includes('national geographic')){
+    hasNeon=false; vignette=0.18; lightColor='rgba(0,0,0,0)'; shadowColor='rgba(0,0,0,0.25)'; 
+    if(lower.includes('golden hour') || lower.includes('warm')) lightStyle='natural golden warm';
+    else lightStyle='natural documentary';
+  } else if(lower.includes('cinematic') || lower.includes('cinematográfico')){
+    hasNeon=false; vignette=0.35; lightColor='rgba(255,140,0,0.12)'; shadowColor='rgba(255,140,0,0.25)'; lightStyle='cinematic warm';
+  } else if(lower.includes('golden') || lower.includes('warm') || lower.includes('dourado')){
+    hasNeon=false; vignette=0.22; lightColor='rgba(255,200,0,0.15)'; shadowColor='rgba(255,180,0,0.3)'; lightStyle='golden warm';
+  } else if(lower.includes('purple') || lower.includes('roxo')){
+    hasNeon=false; vignette=0.4; lightColor='rgba(168,85,247,0.18)'; shadowColor='#a855f7'; lightStyle='purple cinematic';
+  }
 
   const canvas=document.createElement('canvas');
   const sizes={'1:1':[1080,1080],'3:4':[1080,1440],'16:9':[1920,1080],'4:3':[1440,1080],'9:16':[1080,1920],'21:9':[1920,822]};
-  const [w,h]=sizes[aspect]||[1080,1080]; canvas.width=w; canvas.height=h; const ctx=canvas.getContext('2d');
+  const [w,h]=sizes[aspect]||[1080,1920]; canvas.width=w; canvas.height=h; const ctx=canvas.getContext('2d');
+  
+  status.innerHTML+=`<br>✅ Detectado: ${keywords} • Luz: ${lightStyle} ${hasNeon?'COM neon':'SEM neon'}<br>⏳ Baixando B-Roll 4K...`; progress.style.width='40%';
+
   const img=new Image(); img.crossOrigin='anonymous'; img.src=imgUrl;
   const bg=new Image(); bg.crossOrigin='anonymous'; bg.src=bgUrl;
-  await Promise.all([new Promise((res)=>{ img.onload=res; img.onerror=res; setTimeout(res,2500); }), new Promise((res)=>{ bg.onload=res; bg.onerror=res; setTimeout(res,2500); })]);
-  progress.style.width='40%';
-  const stream=canvas.captureStream(30); const recorder=new MediaRecorder(stream,{mimeType:'video/webm;codecs=vp9'}); let chunks=[]; recorder.ondataavailable=e=>{ if(e.data.size>0) chunks.push(e.data); };
+  await Promise.all([
+    new Promise((res)=>{ img.onload=res; img.onerror=res; setTimeout(res,3000); }),
+    new Promise((res)=>{ bg.onload=res; bg.onerror=res; setTimeout(res,3000); })
+  ]);
+
+  // FIX MIME TYPE - compatibilidade Chrome/Edge
+  let mimeType='video/webm;codecs=vp9';
+  if(!MediaRecorder.isTypeSupported(mimeType)){
+    mimeType='video/webm;codecs=vp8';
+    if(!MediaRecorder.isTypeSupported(mimeType)) mimeType='video/webm';
+  }
+
+  const stream=canvas.captureStream(30); const recorder=new MediaRecorder(stream,{mimeType}); let chunks=[]; recorder.ondataavailable=e=>{ if(e.data.size>0) chunks.push(e.data); };
+  
   const videoPromise=new Promise(res=>{
    recorder.onstop=()=>{
     const blob=new Blob(chunks,{type:'video/webm'}); const url=URL.createObjectURL(blob);
     videoLibrary.unshift({prompt,url,aspect,duration,keywords,time:Date.now(),light:lightStyle});
     renderLibrary();
-    result.innerHTML=`<div class="videoItem"><b>${keywords} • ${aspect} ${duration}s • ${lightStyle} ${hasNeon?'• neon':''}</b><div class="small">${prompt.substring(0,100)}</div><video src="${url}" controls autoplay loop muted style="width:100%;margin-top:8px;border-radius:10px;background:#000;max-height:400px"></video><div class="grid2" style="margin-top:8px"><a href="${url}" download="video-${Date.now()}.webm"><button class="btn teal">Baixar</button></a><button class="btn dark" onclick="document.getElementById('videoPrompt').value=decodeURIComponent('${encodeURIComponent(prompt)}')">Reusar</button></div></div>`;
-    status.innerHTML=`✅ Gerado - ${lightStyle} ${hasNeon?'com neon':'sem neon'} • ${aspect} ${duration}s • 3D flutuante + sombra`; progress.style.width='100%'; res();
+    result.innerHTML=`<div class="videoItem"><b>✅ ${keywords} • ${aspect} ${duration}s • ${lightStyle} ${hasNeon?'• COM NEON':'• SEM NEON'}</b><div class="small">${prompt.substring(0,110)}<br>Estilo: ${lightStyle} - ${hasNeon?'Você pediu neon no prompt, então COM neon':'Você pediu natural/no neon/cinematic, então SEM neon, luz ${lightStyle}'}<br>3D Real: flutuação + rotação 360 + sombra real no chão</div><video src="${url}" controls autoplay loop muted playsinline style="width:100%;margin-top:8px;border-radius:10px;background:#000;max-height:500px"></video><div class="grid2" style="margin-top:8px"><a href="${url}" download="video-${Date.now()}.webm"><button class="btn teal">Baixar ${aspect} ${lightStyle}</button></a><button class="btn dark" onclick="document.getElementById('videoPrompt').value=decodeURIComponent('${encodeURIComponent(prompt)}')">Reusar</button></div></div>`;
+    status.innerHTML=`✅ GERADO! ${lightStyle} ${hasNeon?'COM NEON':'SEM NEON (natural/cinematic)'} • ${aspect} ${duration}s • ${keywords} • Pronto pra exportar`; progress.style.width='100%'; res();
    };
   });
+  
   recorder.start(); let frame=0; const totalFrames=duration*30;
   const anim=setInterval(()=>{ 
-    frame++; const floatY=Math.sin(frame*0.06)*30; const rotY=Math.sin(frame*0.02)*0.25; const rotX=Math.sin(frame*0.03)*0.1;
-    const scale=0.55 + Math.sin(frame*0.04)*0.05; const shadowScale=0.8 + Math.sin(frame*0.06)*0.12;
+    frame++; 
+    const floatY=Math.sin(frame*0.06)*28; const rotY=Math.sin(frame*0.02)*0.22; const rotX=Math.sin(frame*0.03)*0.09;
+    const scale=0.58 + Math.sin(frame*0.04)*0.04; const shadowScale=0.82 + Math.sin(frame*0.06)*0.12;
     ctx.clearRect(0,0,w,h);
     ctx.filter=filterStyle;
-    ctx.drawImage(bg, -200, -100, w+400, h+200);
+    ctx.drawImage(bg, -220, -120, w+440, h+240);
     ctx.filter='none';
-    const grad=ctx.createRadialGradient(w/2,h/2,100,w/2,h/2,w);
+    const grad=ctx.createRadialGradient(w/2,h/2,80,w/2,h/2,w*0.9);
     grad.addColorStop(0,'rgba(0,0,0,0)'); grad.addColorStop(1,`rgba(0,0,0,${vignette})`);
     ctx.fillStyle=grad; ctx.fillRect(0,0,w,h);
-    if(hasNeon){ctx.fillStyle=lightColor; ctx.shadowColor='#00E5CC'; ctx.shadowBlur=18; ctx.fillRect(0,h*0.85,w,3); ctx.shadowBlur=0; ctx.fillStyle='rgba(0,229,204,0.1)'; ctx.fillRect(0,h*0.85-35,w,70);}
-    else if(lightColor!=='rgba(0,0,0,0)'){ctx.fillStyle=lightColor; ctx.fillRect(0,0,w,h);}
+    if(hasNeon){
+      ctx.fillStyle=lightColor; ctx.shadowColor='#00E5CC'; ctx.shadowBlur=18; ctx.fillRect(0,h*0.86,w,3); ctx.shadowBlur=0;
+      ctx.fillStyle='rgba(0,229,204,0.10)'; ctx.fillRect(0,h*0.86-38,w,76);
+    } else if(lightColor!=='rgba(0,0,0,0)'){
+      ctx.fillStyle=lightColor; ctx.fillRect(0,0,w,h);
+    }
     ctx.save();
     ctx.translate(w/2, h/2 + floatY);
     ctx.rotate(rotY);
-    ctx.save(); ctx.translate(0, h*0.3); ctx.scale(shadowScale, 0.28); ctx.fillStyle='rgba(0,0,0,0.6)'; ctx.beginPath(); ctx.ellipse(0,0,170,36,0,0,Math.PI*2); ctx.fill(); ctx.restore();
+    ctx.save(); ctx.translate(0, h*0.31); ctx.scale(shadowScale, 0.26); ctx.fillStyle='rgba(0,0,0,0.6)'; ctx.beginPath(); ctx.ellipse(0,0,175,38,0,0,Math.PI*2); ctx.fill(); ctx.restore();
     ctx.scale(scale,scale); ctx.rotate(rotX);
-    if(shadowColor!=='rgba(0,0,0,0)'){ctx.shadowColor=shadowColor; ctx.shadowBlur=24; ctx.fillStyle=lightColor.replace('0.45','0.12').replace('0.2','0.1').replace('0.15','0.08'); if(lightColor!=='rgba(0,0,0,0)'){ctx.beginPath(); ctx.ellipse(0,0,240,150,0,0,Math.PI*2); ctx.fill();} ctx.shadowBlur=0;}
-    ctx.shadowColor='rgba(0,0,0,0.8)'; ctx.shadowBlur=32; ctx.shadowOffsetY=20;
-    ctx.drawImage(img, -240, -170, 480, 340);
+    if(shadowColor!=='rgba(0,0,0,0)' && lightColor!=='rgba(0,0,0,0)'){
+      ctx.shadowColor=shadowColor; ctx.shadowBlur=22; ctx.fillStyle=lightColor.replace('0.45','0.10').replace('0.18','0.08').replace('0.15','0.06').replace('0.12','0.05');
+      ctx.beginPath(); ctx.ellipse(0,0,250,160,0,0,Math.PI*2); ctx.fill(); ctx.shadowBlur=0;
+    }
+    ctx.shadowColor='rgba(0,0,0,0.85)'; ctx.shadowBlur=34; ctx.shadowOffsetY=22;
+    ctx.drawImage(img, -250, -175, 500, 350);
     ctx.shadowBlur=0; ctx.shadowOffsetY=0;
     ctx.restore();
     if(frame>=totalFrames){ clearInterval(anim); recorder.stop(); } 
   },1000/30);
   await videoPromise;
- }catch(e){ status.innerHTML=`Erro: ${e.message}`; progress.style.width='100%'; }
+ }catch(e){ status.innerHTML=`❌ Erro: ${e.message} - Tente recarregar a página`; progress.style.width='100%'; console.error(e); }
 };
-function renderLibrary(){ const lib=document.getElementById('videoLibrary'); if(videoLibrary.length===0){ lib.innerHTML='<div class="small">Nenhum vídeo ainda.</div>'; return; } lib.innerHTML=videoLibrary.slice(0,8).map((v,i)=>`<div class="videoItem" style="display:flex;gap:10px"><video src="${v.url}" style="width:70px;height:70px;border-radius:8px;object-fit:cover" muted></video><div style="flex:1"><b style="font-size:12px">${v.keywords} • ${v.aspect} ${v.light}</b><div class="small" style="margin:4px 0">${v.prompt.substring(0,50)}...</div><a href="${v.url}" download="video-${i}.webm"><button class="btn dark" style="padding:6px;font-size:10px;margin:0">Baixar</button></a></div></div>`).join(''); }
+
+function renderLibrary(){ const lib=document.getElementById('videoLibrary'); if(videoLibrary.length===0){ lib.innerHTML='<div class="small">Nenhum vídeo ainda. Gere o primeiro acima.</div>'; return; } lib.innerHTML=videoLibrary.slice(0,8).map((v,i)=>`<div class="videoItem" style="display:flex;gap:10px"><video src="${v.url}" style="width:70px;height:70px;border-radius:8px;object-fit:cover" muted playsinline></video><div style="flex:1"><b style="font-size:12px">${v.keywords} • ${v.aspect} ${v.light}</b><div class="small" style="margin:4px 0">${v.prompt.substring(0,55)}...</div><a href="${v.url}" download="video-${i}.webm"><button class="btn dark" style="padding:6px;font-size:10px;margin:0">Baixar</button></a></div></div>`).join(''); }
+
 window.gerarVideoPorRoteiro=()=>{
  const roteiro=document.getElementById('roteiro').value.trim(); if(!roteiro) return alert('Cole roteiro'); let cenas=roteiro.split('\n').filter(s=>s.trim().length>5); if(cenas.length<2) cenas=roteiro.split('.').filter(s=>s.trim().length>12);
  const cenasDiv=document.getElementById('roteiroCenas'); cenasDiv.innerHTML=''; 
- cenas.forEach((cena,i)=>{ let img='https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?w=200'; const low=cena.toLowerCase(); if(low.includes('polvo')||low.includes('octopus')) img='https://images.unsplash.com/photo-1545671913-b89ac1b4ac10?w=200'; else if(low.includes('mel')||low.includes('honey')) img='https://images.unsplash.com/photo-1587049352851-8d4e89133924?w=200'; else if(low.includes('espaço')||low.includes('space')) img='https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=200'; cenasDiv.innerHTML+=`<div class="scene"><img src="${img}"><div style="flex:1"><b style="font-size:12px">Cena ${i+1} • ${config.aspect} ${config.dur}s</b><div class="small" style="background:transparent;border:0;padding:2px 0">${cena.substring(0,90)}</div></div><button class="btn teal" style="width:80px;font-size:11px" onclick="document.getElementById('videoPrompt').value='${cena.replace(/'/g,"\\'").substring(0,160)}'; switchTab('videoia',document.querySelectorAll('.tabs button')[0]); gerarVideoIA();">Gerar</button></div>`; });
- document.getElementById('roteiroStatus').innerHTML=`✅ ${cenas.length} cenas criadas. Cada uma com seu estilo.`; document.getElementById('tts').value=cenas[0].substring(0,500);
+ cenas.forEach((cena,i)=>{ 
+  let img='https://images.unsplash.com/photo-1546182990-dffeafbe841d?w=200'; const low=cena.toLowerCase(); 
+  if(low.includes('lion')||low.includes('leão')||low.includes('savana')) img='https://images.unsplash.com/photo-1546182990-dffeafbe841d?w=200';
+  else if(low.includes('ps5')||low.includes('controle')||low.includes('controller')) img='https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?w=200';
+  else if(low.includes('polvo')||low.includes('octopus')) img='https://images.unsplash.com/photo-1545671913-b89ac1b4ac10?w=200';
+  else if(low.includes('mel')||low.includes('honey')) img='https://images.unsplash.com/photo-1587049352851-8d4e89133924?w=200';
+  else if(low.includes('cérebro')||low.includes('brain')) img='https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=200';
+  cenasDiv.innerHTML+=`<div class="scene"><img src="${img}"><div style="flex:1"><b style="font-size:12px">Cena ${i+1} • ${config.aspect} ${config.dur}s</b><div class="small" style="background:transparent;border:0;padding:2px 0">${cena.substring(0,95)}</div></div><button class="btn teal" style="width:80px;font-size:11px" onclick="document.getElementById('videoPrompt').value='${cena.replace(/'/g,"\\'").substring(0,180)}'; switchTab('videoia',document.querySelectorAll('.tabs button')[0]); gerarVideoIA();">Gerar</button></div>`; 
+ });
+ document.getElementById('roteiroStatus').innerHTML=`✅ ${cenas.length} cenas criadas. Cada uma com seu próprio estilo. Clique em Gerar.`; document.getElementById('tts').value=cenas[0].substring(0,500);
 };
+
 window.gerarDreamina=()=>{ const p=document.getElementById('dreaminaPrompt').value.trim()||document.getElementById('videoPrompt').value.trim(); if(!p) return alert('Descreva o vídeo'); document.getElementById('videoPrompt').value=p; switchTab('videoia',document.querySelectorAll('.tabs button')[0]); gerarVideoIA(); };
+
 async function getEdgeHD(text, voiceFull='pt-BR-AntonioNeural', rate='+0%'){
  const trustedToken='6A5AAEFD-19F8-4A4C-9EE2-6CCCF7A716DE'; const wsUrl=`wss://speech.platform.bing.com/consumer/speech/synthesize/readaloud/edge/v1?TrustedClientToken=${trustedToken}`;
  return new Promise((resolve,reject)=>{
@@ -271,20 +333,23 @@ async function getEdgeHD(text, voiceFull='pt-BR-AntonioNeural', rate='+0%'){
   const ws=new WebSocket(wsUrl); let chunks=[];
   ws.onopen=()=>{ ws.send(`X-Timestamp:${Date.now()}\r\nContent-Type:application/json; charset=utf-8\r\nPath:speech.config\r\n\r\n{"context":{"synthesis":{"audio":{"metadataOptions":{"sentenceBoundaryEnabled":false,"wordBoundaryEnabled":true},"outputFormat":"audio-48khz-192kbitrate-mono-mp3"}}}}`); ws.send(`X-RequestId:${crypto.randomUUID()}\r\nContent-Type:application/ssml+xml\r\nX-Timestamp:${Date.now()}Z\r\nPath:ssml\r\n\r\n${ssml}`); };
   ws.onmessage=(e)=>{ if(typeof e.data!=='string'){ e.data.arrayBuffer().then(b=>{ const bytes=new Uint8Array(b); let end=0; for(let i=0;i<bytes.length-3;i++){if(bytes[i]==13&&bytes[i+1]==10&&bytes[i+2]==13&&bytes[i+3]==10){end=i+4;break;}} if(end>0&&bytes.length>end) chunks.push(bytes.slice(end)); }); } };
-  ws.onclose=()=>{ if(chunks.length>0){ const t=chunks.reduce((a,b)=>a+b.length,0); const m=new Uint8Array(t); let o=0; chunks.forEach(c=>{m.set(c,o); o+=c.length;}); resolve(new Blob([m],{type:'audio/mpeg'})); } else reject(new Error('Sem áudio - ative edge://settings/accessibility')); };
+  ws.onclose=()=>{ if(chunks.length>0){ const t=chunks.reduce((a,b)=>a+b.length,0); const m=new Uint8Array(t); let o=0; chunks.forEach(c=>{m.set(c,o); o+=c.length;}); resolve(new Blob([m],{type:'audio/mpeg'})); } else reject(new Error('Sem áudio - ative vozes online em edge://settings/accessibility')); };
   ws.onerror=()=>reject(new Error('Erro TTS')); setTimeout(()=>{try{ws.close();}catch{}},14000);
  });
 }
+
 window.gerarVozHumanaReal=async()=>{
  const texto=(document.getElementById('tts').value.trim()||document.getElementById('roteiro').value.trim()).substring(0,800); if(!texto) return alert('Escreva texto');
  let voz=document.getElementById('voice').value; const rate=document.getElementById('voiceRate').value; const status=document.getElementById('vozStatus'); const wave=document.getElementById('waveform'); const audioEl=document.getElementById('audioEl');
  status.innerHTML=`Gerando voz...`; wave.style.display='flex';
  try{ const blob=await getEdgeHD(texto, voz, rate); audioBlob=blob; const url=URL.createObjectURL(blob); audioEl.src=url; audioEl.style.display='block'; await audioEl.play(); wave.style.display='none'; status.innerHTML=`✅ Voz gerada - ${Math.round(blob.size/1024)}KB`; }catch(e){ wave.style.display='none'; status.innerHTML=`❌ ${e.message}`; }
 };
+
 window.setLeg=(t)=>{
  const previews={mrbeast:`<span style="background:#facc15;color:#000;font-weight:900;padding:14px 24px;border-radius:12px;font-size:28px;border:3px solid #000">VOCÊ SABIA? 🔥</span>`,tiktok:`<span style="background:#fff;color:#000;font-weight:800;padding:12px 20px;border-radius:10px;font-size:24px">você sabia que polvos têm 3 corações?</span>`,emoji:`<span style="background:linear-gradient(135deg,#a855f7,#ec4899);color:#fff;font-weight:900;padding:12px 20px;border-radius:14px;font-size:26px">😱 3 CORAÇÕES?! 🤯</span>`,bold:`<span style="background:#000;color:#fff;font-weight:900;padding:14px 24px;font-size:32px">VOCÊ SABIA?</span>`,neon:`<span style="background:#000;color:#00E5CC;font-weight:900;padding:14px 24px;border-radius:12px;font-size:26px;border:2px solid #00E5CC">VOCÊ SABIA?</span>`,minimal:`<span style="color:#fff;font-weight:500;font-size:22px">Você sabia?</span>`};
  document.getElementById('legPreview').innerHTML=previews[t]||previews['mrbeast'];
 };
+
 window.exportarFinal=async()=>{
  const log=document.getElementById('log'); log.textContent=`Export iniciando...\n`;
  const legText=document.getElementById('legText')?.value||'VOCÊ SABIA?'; 
@@ -304,9 +369,9 @@ window.exportarFinal=async()=>{
   if(audioBlob){ await ffmpeg.writeFile('voice.mp3', await fetchFile(audioBlob)); await ffmpeg.exec(['-loop','1','-i','input.png','-i','voice.mp3','-vf',`subtitles=subs.ass,scale=${w}:${h}`,'-t',String(config.dur),'-c:v','libx264','-c:a','aac','-pix_fmt','yuv420p','-shortest','output.mp4']); }
   else { await ffmpeg.exec(['-loop','1','-i','input.png','-vf',`subtitles=subs.ass,scale=${w}:${h}`,'-t',String(config.dur),'-c:v','libx264','-pix_fmt','yuv420p','output.mp4']); }
   const data=await ffmpeg.readFile('output.mp4'); const url=URL.createObjectURL(new Blob([data.buffer],{type:'video/mp4'}));
-  document.getElementById('list').innerHTML=`<div class="card" style="display:block"><b>✅ Vídeo Final - ${(data.length/1024/1024).toFixed(2)}MB - ${w}x${h}</b><a href="${url}" download="viral-final-${Date.now()}.mp4"><button class="btn yellow" style="margin-top:10px">Baixar Vídeo Final</button></a><video src="${url}" controls style="width:100%;margin-top:10px;border-radius:12px;background:#000"></video></div>`;
+  document.getElementById('list').innerHTML=`<div class="card" style="display:block"><b>✅ Vídeo Final - ${(data.length/1024/1024).toFixed(2)}MB - ${w}x${h}</b><a href="${url}" download="viral-final-${Date.now()}.mp4"><button class="btn yellow" style="margin-top:10px">Baixar Vídeo Final</button></a><video src="${url}" controls style="width:100%;margin-top:10px;border-radius:12px;background:#000" playsinline></video></div>`;
   log.textContent+=`✅ Concluído - ${w}x${h} ${config.dur}s\n`;
- }catch(e){ log.textContent+=`❌ ${e.message}`; }
+ }catch(e){ log.textContent+=`❌ ${e.message}`; console.error(e); }
 };
 renderLibrary();
 </script>
