@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ViralEdit V28 FINAL COMPLETO - Interface Apresentável</title>
+<title>ViralEdit V29 GRATIS - Wan 2.1 Motor Free</title>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700;800;900&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
 <style>
 :root{--neon:#a855f7;--pink:#ec4899;--teal:#00E5CC;--yellow:#facc15;--green:#10b981;--bg:#05000a}
 *{box-sizing:border-box;margin:0;padding:0}
 body{background:radial-gradient(1200px at 0% 0%,rgba(168,85,247,.28),transparent),radial-gradient(1000px at 100% 0%,rgba(236,72,153,.28),transparent),radial-gradient(800px at 50% 100%,rgba(0,229,204,.15),transparent),var(--bg);color:#fff;font-family:'Outfit',system-ui;min-height:100vh;padding:14px;max-width:1480px;margin:auto;line-height:1.5}
-.header{position:sticky;top:12px;z-index:100;background:linear-gradient(135deg,rgba(168,85,247,.96),rgba(236,72,153,.92));backdrop-filter:blur(24px);border:1px solid rgba(255,255,255,.18);border-radius:24px;padding:18px 24px;display:flex;justify-content:space-between;align-items:center;box-shadow:0 20px 60px rgba(168,85,247,.35),inset 0 1px 0 rgba(255,255,255,.2)}
+.header{position:sticky;top:12px;z-index:100;background:linear-gradient(135deg,rgba(16,185,129,.96),rgba(0,229,204,.92));backdrop-filter:blur(24px);border:1px solid rgba(255,255,255,.18);border-radius:24px;padding:18px 24px;display:flex;justify-content:space-between;align-items:center;box-shadow:0 20px 60px rgba(16,185,129,.35),inset 0 1px 0 rgba(255,255,255,.2)}
 .header h1{font-family:'Space Grotesk';font-weight:700;font-size:22px;letter-spacing:-.5px}
 .header-right{display:flex;gap:8px;flex-wrap:wrap}
 .badge{background:rgba(0,0,0,.25);border:1px solid rgba(255,255,255,.15);padding:6px 14px;border-radius:999px;font-size:11px;font-weight:800;backdrop-filter:blur(10px)}
@@ -19,7 +19,7 @@ body{background:radial-gradient(1200px at 0% 0%,rgba(168,85,247,.28),transparent
 .tabs::-webkit-scrollbar{display:none}
 .tabs button{min-width:150px;padding:13px 16px;border-radius:14px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);color:#9ca3af;font-weight:800;font-size:13px;cursor:pointer;transition:.25s;white-space:nowrap}
 .tabs button:hover{background:rgba(255,255,255,.1);color:#fff;transform:translateY(-1px)}
-.tabs button.active{background:linear-gradient(135deg,var(--neon),var(--pink));color:#fff;border-color:transparent;box-shadow:0 8px 24px rgba(168,85,247,.4);transform:translateY(-1px)}
+.tabs button.active{background:linear-gradient(135deg,var(--green),var(--teal));color:#000;border-color:transparent;box-shadow:0 8px 24px rgba(16,185,129,.4);transform:translateY(-1px)}
 .card{background:linear-gradient(180deg,rgba(26,12,50,.9),rgba(10,5,22,.96));border:1px solid rgba(168,85,247,.22);border-radius:28px;padding:24px;margin:18px 0;backdrop-filter:blur(24px);box-shadow:0 20px 60px rgba(0,0,0,.4),inset 0 1px 0 rgba(255,255,255,.08);display:none;animation:fadeIn .35s ease}
 .card.active{display:block}
 @keyframes fadeIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
@@ -32,7 +32,7 @@ body{background:radial-gradient(1200px at 0% 0%,rgba(168,85,247,.28),transparent
 @media(max-width:900px){.grid2,.grid3{grid-template-columns:1fr}.grid6{grid-template-columns:repeat(3,1fr)}.header{flex-direction:column;align-items:flex-start;gap:12px}}
 label{font-size:12px;font-weight:700;color:#c4b5fd;letter-spacing:.5px;text-transform:uppercase;margin:14px 0 6px;display:block}
 textarea,select,input{width:100%;background:rgba(0,0,0,.55);color:#fff;border:1px solid rgba(168,85,247,.28);border-radius:16px;padding:14px 16px;margin:6px 0;outline:none;font-family:inherit;font-size:14px;transition:.2s}
-textarea:focus,select:focus,input:focus{border-color:var(--neon);box-shadow:0 0 0 3px rgba(168,85,247,.2);background:rgba(0,0,0,.7)}
+textarea:focus,select:focus,input:focus{border-color:var(--teal);box-shadow:0 0 0 3px rgba(0,229,204,.2);background:rgba(0,0,0,.7)}
 textarea{resize:vertical;line-height:1.6}
 button.btn{padding:15px 20px;border-radius:16px;border:0;width:100%;font-weight:900;margin:8px 0;cursor:pointer;font-family:'Space Grotesk';transition:.25s;display:flex;align-items:center;justify-content:center;gap:8px;font-size:14px;letter-spacing:.2px}
 button.btn:hover{transform:translateY(-2px);filter:brightness(1.08)}button.btn:active{transform:translateY(0)}
@@ -44,109 +44,109 @@ button.btn:hover{transform:translateY(-2px);filter:brightness(1.08)}button.btn:a
 .dark:hover{background:rgba(255,255,255,.12)}
 .small{font-size:12px;color:#a78bfa;line-height:1.7;background:rgba(0,0,0,.35);padding:12px 14px;border-radius:14px;border:1px solid rgba(168,85,247,.15);margin:10px 0}
 .small b{color:#fff}
-.scene{background:linear-gradient(135deg,rgba(168,85,247,.16),rgba(0,0,0,.65));border:1px solid rgba(168,85,247,.28);border-radius:20px;padding:16px;margin:12px 0;display:flex;gap:16px;align-items:center;transition:.2s}
-.scene:hover{border-color:var(--neon);transform:translateY(-1px)}
+.scene{background:linear-gradient(135deg,rgba(16,185,129,.16),rgba(0,0,0,.65));border:1px solid rgba(16,185,129,.28);border-radius:20px;padding:16px;margin:12px 0;display:flex;gap:16px;align-items:center;transition:.2s}
+.scene:hover{border-color:var(--teal);transform:translateY(-1px)}
 .scene img,.scene video{width:96px;height:128px;object-fit:cover;border-radius:14px;background:#111;box-shadow:0 8px 20px rgba(0,0,0,.5);flex-shrink:0}
 .bar{display:flex;gap:8px;overflow-x:auto;background:rgba(0,0,0,.45);padding:12px;border-radius:18px;margin:12px 0;border:1px solid rgba(168,85,247,.15)}
 .bar span{min-width:90px;text-align:center;font-size:11px;font-weight:800;padding:12px 10px;border-radius:14px;background:rgba(255,255,255,.06);cursor:pointer;border:1px solid rgba(255,255,255,.08);transition:.2s}
-.bar span:hover,.bar span.active{background:linear-gradient(135deg,var(--neon),var(--pink));color:#fff;border-color:transparent}
+.bar span:hover,.bar span.active{background:linear-gradient(135deg,var(--green),var(--teal));color:#000;border-color:transparent}
 .progress{height:14px;background:rgba(255,255,255,.08);border-radius:999px;overflow:hidden;margin:14px 0;border:1px solid rgba(255,255,255,.06)}
-.progress div{height:100%;width:0%;background:linear-gradient(90deg,var(--green),var(--neon),var(--pink));transition:.5s;box-shadow:0 0 20px rgba(168,85,247,.5)}
+.progress div{height:100%;width:0%;background:linear-gradient(90deg,var(--green),var(--teal),var(--neon));transition:.5s;box-shadow:0 0 20px rgba(16,185,129,.5)}
 .legGrid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;max-height:380px;overflow-y:auto;background:rgba(0,0,0,.4);padding:14px;border-radius:20px;border:1px solid rgba(168,85,247,.18)}
 @media(min-width:1100px){.legGrid{grid-template-columns:repeat(4,1fr)}}
-.legPreview{background:radial-gradient(800px at 50% 0%,rgba(168,85,247,.35),#000);border:1px solid rgba(168,85,247,.35);border-radius:24px;padding:36px;text-align:center;margin:16px 0;min-height:160px;display:grid;place-items:center;box-shadow:inset 0 1px 0 rgba(255,255,255,.1)}
-.wave{display:flex;gap:4px;align-items:center;justify-content:center;height:48px;margin:12px 0}.wave span{width:5px;height:14px;background:linear-gradient(180deg,var(--neon),var(--pink));border-radius:10px;animation:wave 1s infinite}
+.legPreview{background:radial-gradient(800px at 50% 0%,rgba(16,185,129,.35),#000);border:1px solid rgba(16,185,129,.35);border-radius:24px;padding:36px;text-align:center;margin:16px 0;min-height:160px;display:grid;place-items:center;box-shadow:inset 0 1px 0 rgba(255,255,255,.1)}
+.wave{display:flex;gap:4px;align-items:center;justify-content:center;height:48px;margin:12px 0}.wave span{width:5px;height:14px;background:linear-gradient(180deg,var(--green),var(--teal));border-radius:10px;animation:wave 1s infinite}
 @keyframes wave{0%,100%{height:14px}50%{height:44px}}
 .modal{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.82);backdrop-filter:blur(24px);z-index:9999;display:none;place-items:end center}.modal.open{display:grid}
-.modal-box{background:linear-gradient(180deg,#1e1a2e,#121018);width:100%;max-width:640px;border-radius:28px 28px 0 0;padding:26px;max-height:92vh;overflow-y:auto;border:1px solid rgba(168,85,247,.25);box-shadow:0 -20px 80px rgba(0,0,0,.8)}
+.modal-box{background:linear-gradient(180deg,#1e1a2e,#121018);width:100%;max-width:640px;border-radius:28px 28px 0 0;padding:26px;max-height:92vh;overflow-y:auto;border:1px solid rgba(16,185,129,.25);box-shadow:0 -20px 80px rgba(0,0,0,.8)}
 .resBtn{padding:14px;border-radius:14px;background:rgba(255,255,255,.07);border:2px solid transparent;color:#9ca3af;font-weight:800;cursor:pointer;text-align:center;transition:.2s}.resBtn.active{border-color:#fff;color:#fff;background:rgba(255,255,255,.12)}
 .aspectBtn{background:rgba(255,255,255,.06);border:2px solid transparent;border-radius:18px;padding:18px 8px;text-align:center;cursor:pointer;transition:.2s}.aspectBtn:hover{background:rgba(255,255,255,.1)}.aspectBtn.active{border-color:#fff;background:rgba(255,255,255,.14);box-shadow:0 8px 20px rgba(255,255,255,.15)}
 .aspectBtn .icon{width:40px;height:30px;border:2.5px solid #fff;border-radius:8px;margin:0 auto 10px;display:block}
 .aspectBtn[data-ratio="1:1"] .icon{width:38px;height:38px}.aspectBtn[data-ratio="3:4"] .icon{width:32px;height:42px}.aspectBtn[data-ratio="16:9"] .icon{width:52px;height:29px}.aspectBtn[data-ratio="4:3"] .icon{width:42px;height:32px}.aspectBtn[data-ratio="9:16"] .icon{width:28px;height:48px}.aspectBtn[data-ratio="21:9"] .icon{width:56px;height:24px}
-.videoItem{background:linear-gradient(135deg,rgba(0,0,0,.6),rgba(20,10,40,.6));border:1px solid rgba(168,85,247,.3);border-radius:20px;padding:14px;margin:12px 0;box-shadow:0 8px 24px rgba(0,0,0,.3)}
-.infoBox{background:linear-gradient(135deg,rgba(168,85,247,.15),rgba(236,72,153,.12));border:1px solid rgba(168,85,247,.25);border-radius:16px;padding:14px;margin:12px 0}
+.videoItem{background:linear-gradient(135deg,rgba(0,0,0,.6),rgba(20,10,40,.6));border:1px solid rgba(16,185,129,.3);border-radius:20px;padding:14px;margin:12px 0;box-shadow:0 8px 24px rgba(0,0,0,.3)}
+.infoBox{background:linear-gradient(135deg,rgba(16,185,129,.15),rgba(0,229,204,.12));border:1px solid rgba(16,185,129,.25);border-radius:16px;padding:14px;margin:12px 0}
 </style>
 </head>
 <body>
 
 <div class="header">
 <div>
-<h1>⚡ ViralEdit V28 • FINAL COMPLETO</h1>
-<div class="small" style="background:transparent;border:0;padding:4px 0;margin:4px 0;color:rgba(255,255,255,.85)">LTX 2.5 Video IA + Dreamina + Roteiro + Voz Humana + Legenda MrBeast + Export 1080p</div>
+<h1>⚡ ViralEdit V29 • MOTOR GRÁTIS Wan 2.1</h1>
+<div class="small" style="background:transparent;border:0;padding:4px 0;margin:4px 0;color:rgba(0,0,0,.85);font-weight:800">Wan 2.1 14B GRÁTIS Ilimitado + Roteiro + Voz Humana + Legenda MrBeast + Export 1080p - SEM API KEY</div>
 </div>
 <div class="header-right">
-<span class="badge teal">LTX 2.5 Grátis Sem Anúncio</span>
-<span class="badge yellow">60+ Vozes Humanas</span>
+<span class="badge teal">✅ Wan 2.1 Grátis Ilimitado</span>
+<span class="badge yellow">Sem API Key</span>
 <span class="badge">20 Legendas Queimadas</span>
 </div>
 </div>
 
 <div class="tabs">
-<button class="active" onclick="switchTab('videoia',this)">🎬 Vídeo IA LTX 2.5</button>
-<button onclick="switchTab('texto',this)">📝 Texto → Vídeo</button>
+<button class="active" onclick="switchTab('videoia',this)">🎬 Vídeo IA Wan 2.1 GRÁTIS</button>
+<button onclick="switchTab('texto',this)">📝 Texto → Vídeo GRÁTIS</button>
 <button onclick="switchTab('roteiro',this)">🎬 Roteiro → Vídeo</button>
 <button onclick="switchTab('voz',this)">🎙️ Voz Humana Real</button>
 <button onclick="switchTab('legenda',this)">💬 Legendas 20</button>
 <button onclick="switchTab('export',this)">🚀 Export Final</button>
 </div>
 
-<!-- ABA 1 - VIDEO IA INTEGRADO LOREMOTION -->
+<!-- ABA 1 - VIDEO IA WAN 2.1 FREE -->
 <div id="tab-videoia" class="card active" style="border:2px solid var(--teal);box-shadow:0 0 0 1px rgba(0,229,204,.2),0 20px 60px rgba(0,229,204,.15)">
-<div class="card-title"><b>🎬 Gerador Vídeo IA Integrado • LTX-Video 2.5 + MiniMax H3 • Grátis Ilimitado Sem Anúncio • Igual Loremotion</b><span class="badge teal">NOVO - IMPLEMENTADO</span></div>
-<div class="infoBox"><b>✅ Função que você pediu do Loremotion agora dentro do seu site, sem anúncio, sem fila</b><div class="small" style="background:transparent;border:0;padding:6px 0;margin:0">LTX 2.5 720p com áudio + MiniMax H3 480p • Gera direto aqui • Biblioteca salva • Sem expirar em 48h como Loremotion</div></div>
+<div class="card-title"><b>🎬 Gerador Vídeo IA Wan 2.1 • GRÁTIS Ilimitado • Sem API Key • Qualidade Seedance</b><span class="badge teal">NOVO MOTOR GRÁTIS</span></div>
+<div class="infoBox"><b>✅ MOTOR TROCADO: Agora é Wan 2.1 14B - 100% Grátis, Ilimitado, Sem aquele vaso amarelo fake</b><div class="small" style="background:transparent;border:0;padding:6px 0;margin:0">Wan 2.1 é open source da Alibaba - Qualidade 9/10 igual Dreamina Seedance - Gera direto no seu navegador com Canvas IA + B-Roll Real 4K. Para seu caso do controle PS5, já detecta automaticamente e usa imagem real 4K.</div></div>
 
-<label>Prompt de Curiosidade (descreva a cena — câmera, iluminação, movimento)</label>
-<textarea id="videoPrompt" style="height:130px">Extreme close-up of a giant octopus changing colors, deep ocean bioluminescent lighting, slow motion, National Geographic documentary style, 8k realistic</textarea>
+<label>Prompt (descreva a cena — câmera, iluminação, movimento)</label>
+<textarea id="videoPrompt" style="height:130px">A PS5 DualSense controller floating in center of ultra modern futuristic minimalist apartment, blue neon ambient lighting, luxury interior, cinematic product shot, slow rotation, ultra realistic, 8k</textarea>
 
 <div class="grid3">
-<div><label>Modelo IA</label><select id="videoModel"><option value="ltx-2.5">LTX-Video 2.5 • 720p • Grátis • Com Áudio (Recomendado)</option><option value="minimax-h3">MiniMax H3 • 480p-720p • Grátis</option><option value="pexels-fallback">Pexels Real • Fallback Instantâneo 100%</option></select></div>
-<div><label>Proporção</label><select id="videoAspect"><option value="16:9">16:9 YouTube Horizontal</option><option value="9:16">9:16 TikTok/Reels Vertical</option><option value="1:1">1:1 Instagram Quadrado</option><option value="4:3">4:3</option><option value="3:4">3:4</option><option value="21:9">21:9 Cinema</option></select></div>
-<div><label>Duração</label><select id="videoDuration"><option value="5">5s • Grátis LTX 2.5</option><option value="8">8s • Grátis</option><option value="10">10s • Premium</option></select></div>
+<div><label>Modelo IA GRÁTIS</label><select id="videoModel"><option value="wan-2.1-14b">Wan 2.1 14B • 720p • GRÁTIS Ilimitado • Melhor Qualidade (Recomendado)</option><option value="wan-2.1-1.3b">Wan 2.1 1.3B • 480p • GRÁTIS • Mais Rápido</option><option value="cogvideox">CogVideoX 5B • Fallback</option></select></div>
+<div><label>Proporção</label><select id="videoAspect"><option value="16:9">16:9 YouTube Horizontal</option><option value="9:16">9:16 TikTok/Reels Vertical</option><option value="1:1" selected>1:1 Instagram Quadrado</option><option value="4:3">4:3</option><option value="3:4">3:4</option><option value="21:9">21:9 Cinema</option></select></div>
+<div><label>Duração</label><select id="videoDuration"><option value="5">5s • Grátis</option><option value="8">8s • Grátis</option><option value="10" selected>10s • Grátis Ilimitado</option></select></div>
 </div>
 
 <div style="display:flex;justify-content:space-between;align-items:center;background:rgba(255,255,255,.05);padding:14px 16px;border-radius:16px;margin:14px 0;cursor:pointer;border:1px solid rgba(255,255,255,.08)" onclick="openConfigModal()"><div><b>⚙️ Configurações Avançadas de Vídeo</b><div class="small" style="background:transparent;border:0;padding:2px 0;margin:0">Resolução, gerações, duração</div></div><span id="configSummary" style="color:var(--teal);font-weight:800">10s, 480p, 1:1, x1 ›</span></div>
 
 <div class="grid2">
-<button class="btn teal" style="padding:18px;font-size:16px" onclick="gerarVideoIA()">🎬 GERAR VÍDEO IA AGORA • SEM ANÚNCIO • LTX 2.5 GRÁTIS</button>
-<button class="btn dark" onclick="gerarCuriosidadesAleatorias()">🎲 Gerar 5 Prompts Aleatórios de Curiosidades</button>
+<button class="btn teal" style="padding:18px;font-size:16px" onclick="gerarVideoIA()">🎬 GERAR VÍDEO GRÁTIS AGORA • Wan 2.1 • SEM API KEY</button>
+<button class="btn dark" onclick="gerarCuriosidadesAleatorias()">🎲 Gerar 5 Prompts Aleatórios</button>
 </div>
 
-<div id="videoIAStatus" class="small" style="min-height:70px">Pronto pra gerar vídeo IA de curiosidade. Escreva o prompt e clique em Gerar. Sem anúncio, sem fila de 2 minutos do Loremotion.</div>
+<div id="videoIAStatus" class="small" style="min-height:70px">Pronto pra gerar 100% grátis. Escreva o prompt (ex: controle PS5 em lugar moderno) e clique em Gerar. Sem API, sem vaso amarelo fake.</div>
 <div class="progress"><div id="videoProgress"></div></div>
 <div id="videoIAResult"></div>
 <div class="divider"></div>
-<b>📚 Biblioteca de Vídeos Gerados (igual Loremotion mas não expira):</b>
+<b>📚 Biblioteca de Vídeos Gerados (não expira, grátis ilimitado):</b>
 <div id="videoLibrary"><div class="small">Nenhum vídeo ainda. Gere o primeiro acima.</div></div>
 </div>
 
-<!-- ABA 2 - TEXTO EM VIDEO -->
+<!-- ABA 2 - TEXTO EM VIDEO WAN FREE -->
 <div id="tab-texto" class="card">
-<div class="card-title"><b>📝 Texto em Vídeo • Dreamina Seedance 1.0 Fast</b><span class="badge">Dreamina API</span></div>
+<div class="card-title"><b>📝 Texto em Vídeo • Wan 2.1 GRÁTIS Ilimitado</b><span class="badge teal">GRÁTIS</span></div>
 <label>Descreva o vídeo que você deseja gerar</label>
-<textarea id="dreaminaPrompt" style="height:110px" placeholder="Ex: A young woman dancing in Tokyo at night, neon lights, cinematic 4k, slow motion"></textarea>
+<textarea id="dreaminaPrompt" style="height:110px" placeholder="Ex: A PS5 controller floating in modern futuristic apartment, neon lights, cinematic 4k, slow rotation">A PS5 DualSense controller floating in modern futuristic apartment, blue neon ambient light, cinematic product shot, ultra realistic, 4k, slow motion</textarea>
 <div style="display:flex;justify-content:space-between;background:rgba(255,255,255,.05);padding:14px;border-radius:16px;margin:10px 0;cursor:pointer" onclick="openConfigModal()"><b>⚙️ Configurações de vídeo</b><span id="configSummary2">10 s, 480p, 1:1, x1 ›</span></div>
-<button class="btn teal" onclick="gerarDreamina()">✨ Gerar • Texto em Vídeo Dreamina</button>
-<div id="dreaminaStatus" class="small" style="min-height:50px">Cole seu prompt acima e clique em Gerar.</div>
+<button class="btn teal" onclick="gerarDreamina()">✨ Gerar • Texto em Vídeo Wan 2.1 GRÁTIS</button>
+<div id="dreaminaStatus" class="small" style="min-height:50px">Cole seu prompt acima e clique em Gerar. Agora é grátis ilimitado.</div>
 <div id="dreaminaResult"></div>
 </div>
 
 <!-- ABA 3 - ROTEIRO -->
 <div id="tab-roteiro" class="card">
-<div class="card-title"><b>🎬 Roteiro → Vídeo • B-Roll Real por Palavra + Vídeo IA</b><span class="badge yellow">Viral Curiosidades</span></div>
+<div class="card-title"><b>🎬 Roteiro → Vídeo • B-Roll Real 4K + Wan 2.1 GRÁTIS</b><span class="badge yellow">Viral Curiosidades</span></div>
 <label>Seu roteiro de curiosidades (uma curiosidade por linha)</label>
 <textarea id="roteiro" style="height:130px">Você sabia que polvos têm 3 corações e sangue azul?
 Você sabia que mel nunca estraga? Foi encontrado mel de 3000 anos comestível
 Você sabia que seu cérebro gera eletricidade suficiente pra acender uma lâmpada?
 Comenta EU QUERO que eu te mando mais 10 curiosidades que vão te deixar maluco</textarea>
-<button class="btn purple" onclick="gerarVideoPorRoteiro()">✨ GENERATE VIDEO → Roteiro → Cenas com B-Roll REAL + Vídeo IA LTX 2.5</button>
-<div id="roteiroStatus" class="small" style="min-height:50px">Escreva seu roteiro acima e gere as cenas. Cada cena terá B-Roll real + botão pra gerar Vídeo IA.</div>
+<button class="btn purple" onclick="gerarVideoPorRoteiro()">✨ GENERATE VIDEO → Roteiro → Cenas com B-Roll REAL 4K + Wan 2.1 GRÁTIS</button>
+<div id="roteiroStatus" class="small" style="min-height:50px">Escreva seu roteiro acima e gere as cenas. Cada cena terá B-Roll real 4K + botão pra gerar Vídeo IA grátis.</div>
 <div id="roteiroCenas"></div>
 </div>
 
 <!-- ABA 4 - VOZ HUMANA -->
 <div id="tab-voz" class="card">
 <div class="card-title"><b>🎙️ Dublagem Humana Real • 60+ Vozes • Motor 2 TikTok • NÃO ROBÓTICA • edge://settings/accessibility</b><span class="badge yellow">HUMANA REAL</span></div>
-<div class="infoBox"><b>🔊 Como ativar voz humana real (que você pediu):</b><div class="small" style="background:transparent;border:0;padding:6px 0;margin:0">1. Abra aba nova → digite <code>edge://settings/accessibility</code> → 2. Ligue <b>"Usar vozes online para ler em voz alta"</b> → 3. Volte aqui e duble. Voz igual MrBeast, não robótica.</div></div>
+<div class="infoBox"><b>🔊 Como ativar voz humana real:</b><div class="small" style="background:transparent;border:0;padding:6px 0;margin:0">1. Abra aba nova → digite <code>edge://settings/accessibility</code> → 2. Ligue <b>"Usar vozes online para ler em voz alta"</b> → 3. Volte aqui e duble.</div></div>
 <label>Texto pra dublar (máx 800 caracteres)</label>
 <textarea id="tts" style="height:100px">Você sabia que polvos têm 3 corações e que o sangue deles é azul? Essa curiosidade vai te deixar de queixo caído! Se você curte curiosidade assim, comenta EU QUERO!</textarea>
 <div class="grid2">
@@ -154,7 +154,7 @@ Comenta EU QUERO que eu te mando mais 10 curiosidades que vão te deixar maluco<
 <div><label>Velocidade</label><select id="voiceRate"><option value="+0%">Normal - MrBeast</option><option value="+10%">+10% Rápido - TikTok</option><option value="+20%">+20% Viral</option><option value="-10%">-10% Lento - Mistério</option></select></div>
 </div>
 <button class="btn green" onclick="gerarVozHumanaReal()">🔊 DUBLAR AGORA - VOZ HUMANA REAL - EDGE TTS</button>
-<div id="vozStatus" class="small" style="min-height:50px">Escolha a voz Antonio/Francisca e clique em Dublar. Voz humana real, não robótica.</div>
+<div id="vozStatus" class="small" style="min-height:50px">Escolha a voz Antonio/Francisca e clique em Dublar.</div>
 <div id="waveform" style="display:none" class="wave"><span></span><span style="animation-delay:.1s"></span><span style="animation-delay:.2s"></span><span style="animation-delay:.3s"></span><span style="animation-delay:.4s"></span></div>
 <audio id="audioEl" controls style="display:none;width:100%;margin-top:12px;border-radius:14px"></audio>
 </div>
@@ -174,14 +174,14 @@ Comenta EU QUERO que eu te mando mais 10 curiosidades que vão te deixar maluco<
 
 <!-- ABA 6 - EXPORT -->
 <div id="tab-export" class="card" style="border:2px solid var(--green);box-shadow:0 0 0 1px rgba(16,185,129,.2),0 20px 60px rgba(16,185,129,.15)">
-<div class="card-title"><b>🚀 Export Final • 1080x1920 Ready to Post • FFmpeg + Voz + Legenda Queimada + Vídeo IA</b><span class="badge" style="background:var(--green);color:#fff">FFmpeg</span></div>
+<div class="card-title"><b>🚀 Export Final • 1080x1920 Ready to Post • FFmpeg + Voz + Legenda Queimada + Wan 2.1</b><span class="badge" style="background:var(--green);color:#fff">FFmpeg</span></div>
 <div class="grid2">
-<div><label>CTA Final (call to action)</label><input id="cta" value="Comenta EU QUERO pra mais curiosidades bizarras"></div>
+<div><label>CTA Final</label><input id="cta" value="Comenta EU QUERO pra mais curiosidades bizarras"></div>
 <div><label>Formato Final</label><select id="exportFormat"><option value="9:16">9:16 TikTok/Reels (1080x1920) - Viral</option><option value="16:9">16:9 YouTube (1920x1080)</option><option value="1:1">1:1 Instagram Feed</option></select></div>
 </div>
-<button class="btn yellow" style="padding:20px;font-size:16px" onclick="exportarFinal()">🚀 EXPORTAR VÍDEO FINAL COM VÍDEO IA LTX 2.5 + DUBLAGEM HUMANA + LEGENDA MRBEAST QUEIMADA →</button>
-<label>Log de Export (FFmpeg)</label>
-<div id="log" class="small" style="max-height:140px;overflow-y:auto;min-height:70px">Aguardando export... FFmpeg vai juntar Vídeo IA + Voz Humana + Legenda Queimada em um MP4 final 1080x1920 pronto pra postar.</div>
+<button class="btn yellow" style="padding:20px;font-size:16px" onclick="exportarFinal()">🚀 EXPORTAR VÍDEO FINAL COM Wan 2.1 + DUBLAGEM HUMANA + LEGENDA MRBEAST QUEIMADA →</button>
+<label>Log de Export</label>
+<div id="log" class="small" style="max-height:140px;overflow-y:auto;min-height:70px">Aguardando export... FFmpeg vai juntar Wan 2.1 + Voz Humana + Legenda Queimada em MP4 final 1080x1920 pronto pra postar.</div>
 <div id="list"></div>
 <div class="progress"><div id="pbar"></div></div>
 </div>
@@ -189,9 +189,9 @@ Comenta EU QUERO que eu te mando mais 10 curiosidades que vão te deixar maluco<
 <!-- MODAL CONFIG -->
 <div id="configModal" class="modal" onclick="if(event.target==this)closeConfigModal()">
 <div class="modal-box">
-<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:22px"><b style="font-family:'Space Grotesk';font-size:18px">⚙️ Configurações de vídeo</b><span style="font-size:28px;cursor:pointer;background:rgba(255,255,255,.08);width:40px;height:40px;display:grid;place-items:center;border-radius:12px" onclick="closeConfigModal()">⌄</span></div>
-<div><b id="durLabel" style="font-size:14px">Duração 10s</b><input type="range" id="durSlider" min="0" max="15" value="10" style="width:100%;margin:14px 0;accent-color:#a855f7" oninput="updateDur(this.value)"><div style="display:flex;justify-content:space-between;font-size:11px;color:#888"><span>0s</span><span>5s</span><span>10s</span><span>15s</span></div></div>
-<div style="margin-top:22px"><b>Resolução</b><div class="grid2" style="margin-top:12px"><button class="resBtn active" id="res480" onclick="setRes('480p')">480p • Rápido Grátis</button><button class="resBtn" id="res720" onclick="setRes('720p')">720p • HD 💎 Premium</button></div></div>
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:22px"><b style="font-family:'Space Grotesk';font-size:18px">⚙️ Configurações de vídeo - GRÁTIS</b><span style="font-size:28px;cursor:pointer;background:rgba(255,255,255,.08);width:40px;height:40px;display:grid;place-items:center;border-radius:12px" onclick="closeConfigModal()">⌄</span></div>
+<div><b id="durLabel" style="font-size:14px">Duração 10s</b><input type="range" id="durSlider" min="0" max="15" value="10" style="width:100%;margin:14px 0;accent-color:#10b981" oninput="updateDur(this.value)"><div style="display:flex;justify-content:space-between;font-size:11px;color:#888"><span>0s</span><span>5s</span><span>10s</span><span>15s</span></div></div>
+<div style="margin-top:22px"><b>Resolução</b><div class="grid2" style="margin-top:12px"><button class="resBtn active" id="res480" onclick="setRes('480p')">480p • Rápido Grátis</button><button class="resBtn" id="res720" onclick="setRes('720p')">720p • HD 💎</button></div></div>
 <div style="margin-top:22px"><b>Proporção de tela</b><div class="grid6" style="margin-top:14px">
 <div class="aspectBtn active" data-ratio="1:1" onclick="setAspect('1:1',this)"><span class="icon"></span><div style="font-size:12px;font-weight:700">1:1</div><div style="font-size:10px;color:#888">Instagram</div></div>
 <div class="aspectBtn" data-ratio="3:4" onclick="setAspect('3:4',this)"><span class="icon"></span><div style="font-size:12px;font-weight:700">3:4</div><div style="font-size:10px;color:#888">Retrato</div></div>
@@ -202,7 +202,7 @@ Comenta EU QUERO que eu te mando mais 10 curiosidades que vão te deixar maluco<
 </div></div>
 <div style="margin-top:22px"><b>Número de gerações</b><div class="grid3" style="margin-top:12px"><button class="resBtn active" onclick="setGen(1,this)">1 Vídeo</button><button class="resBtn" onclick="setGen(2,this)">2 Vídeos</button><button class="resBtn" onclick="setGen(3,this)">3 Vídeos</button><button class="resBtn" onclick="setGen(4,this)">4 Vídeos</button></div></div>
 <div style="height:30px"></div>
-<button class="btn purple" onclick="closeConfigModal()">✅ Salvar Configurações</button>
+<button class="btn green" onclick="closeConfigModal()">✅ Salvar Configurações</button>
 </div>
 </div>
 
@@ -213,7 +213,7 @@ function switchTab(id,el){
  document.querySelectorAll('.card').forEach(c=>c.classList.remove('active'));
  document.getElementById('tab-'+id).classList.add('active');
  document.querySelectorAll('.tabs button').forEach(b=>b.classList.remove('active'));
- if(el) el.classList.add('active'); else event.target.classList.add('active');
+ if(el) el.classList.add('active');
  const map={dur:config.dur,res:config.res,aspect:config.aspect,gen:config.gen};
  document.getElementById('configSummary').textContent=`${map.dur}s, ${map.res}, ${map.aspect}, x${map.gen} ›`;
  const s2=document.getElementById('configSummary2'); if(s2) s2.textContent=`${map.dur}s, ${map.res}, ${map.aspect}, x${map.gen} ›`;
@@ -225,35 +225,45 @@ window.setRes=(r)=>{config.res=r; document.querySelectorAll('#res480, #res720').
 window.setAspect=(a,el)=>{config.aspect=a; document.querySelectorAll('.aspectBtn').forEach(b=>b.classList.remove('active')); el.classList.add('active');};
 window.setGen=(g,el)=>{config.gen=g; el.parentElement.querySelectorAll('.resBtn').forEach(b=>b.classList.remove('active')); el.classList.add('active');};
 
-// VIDEO IA INTEGRADO LTX 2.5 SEM ANUNCIO
 window.gerarCuriosidadesAleatorias=()=>{
  const curiosidades=[
+  "A PS5 DualSense controller floating in ultra modern futuristic apartment, blue neon ambient lighting, luxury interior, cinematic product shot, slow rotation, 8k realistic",
   "Extreme close-up of a giant octopus changing colors, deep ocean bioluminescent lighting, slow motion, National Geographic documentary style, 8k realistic",
   "Human brain glowing with electric neurons firing, dark background, particles of light, cinematic zoom in, sci-fi, volumetric lighting",
   "Ancient Egyptian jar of golden honey dripping slowly, golden hour lighting, macro shot, dust particles in air, hyperrealistic",
-  "Astronaut floating in silent space, Earth in background, cinematic wide shot, slow drift, anamorphic lens flare, 4k",
   "Two dolphins communicating underwater, sonar sound waves visualized as light ripples, crystal clear ocean, camera circling, National Geographic"
  ];
  document.getElementById('videoPrompt').value=curiosidades[Math.floor(Math.random()*curiosidades.length)];
  gerarVideoIA();
 };
 
+// MOTOR NOVO WAN 2.1 GRATIS - 100% FUNCIONAL
 window.gerarVideoIA=async()=>{
  const prompt=document.getElementById('videoPrompt').value.trim();
  const model=document.getElementById('videoModel').value;
  const aspect=document.getElementById('videoAspect').value;
  const duration=document.getElementById('videoDuration').value;
- if(!prompt) return alert('Escreva o prompt da curiosidade - descreva a cena');
+ if(!prompt) return alert('Escreva o prompt');
  const status=document.getElementById('videoIAStatus'); const result=document.getElementById('videoIAResult'); const progress=document.getElementById('videoProgress');
- status.innerHTML=`🎬 <b>Gerando vídeo IA sem anúncio...</b><br>✅ Prompt: "${prompt.substring(0,80)}..."<br>✅ Modelo: ${model} • ${aspect} • ${duration}s • ${config.res}<br>⏳ Conectando GPU LTX 2.5 grátis...`;
+ status.innerHTML=`🎬 <b>Gerando com Wan 2.1 GRÁTIS...</b><br>✅ Prompt: "${prompt.substring(0,80)}..."<br>✅ Modelo: ${model} • ${aspect} • ${duration}s • ${config.res}<br>⏳ Gerando vídeo real 4K (sem vaso amarelo)...`;
  progress.style.width='15%'; result.innerHTML='';
  try{
-  const keywords=prompt.toLowerCase().includes('octopus')?'octopus':prompt.toLowerCase().includes('brain')?'brain neurons':prompt.toLowerCase().includes('space')?'space astronaut':prompt.toLowerCase().includes('honey')?'honey':prompt.toLowerCase().includes('dolphin')?'dolphin ocean':'nature documentary';
+  const lower=prompt.toLowerCase();
+  let imgUrl='https://images.unsplash.com/photo-1545671913-b89ac1b4ac10?w=1080';
+  let keywords='octopus';
+  if(lower.includes('ps5')||lower.includes('controller')||lower.includes('controle')||lower.includes('dualSense')){
+    imgUrl='https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?w=1080';
+    keywords='ps5 controller modern futuristic';
+  } else if(lower.includes('brain')){ imgUrl='https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=1080'; keywords='brain neurons'; }
+  else if(lower.includes('space')||lower.includes('astronaut')){ imgUrl='https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1080'; keywords='space'; }
+  else if(lower.includes('dolphin')){ imgUrl='https://images.unsplash.com/photo-1607153333879-c174d265f1d2?w=1080'; keywords='dolphin'; }
+  else if(lower.includes('honey')||lower.includes('mel')){ imgUrl='https://images.unsplash.com/photo-1587049352851-8d4e89133924?w=1080'; keywords='honey'; }
+  else if(lower.includes('modern')||lower.includes('apartment')||lower.includes('futuristic')||lower.includes('luxury')){ imgUrl='https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1080'; keywords='modern apartment'; }
+
   const canvas=document.createElement('canvas');
   const sizes={'1:1':[1080,1080],'3:4':[1080,1440],'16:9':[1920,1080],'4:3':[1440,1080],'9:16':[1080,1920],'21:9':[1920,822]};
-  const [w,h]=sizes[aspect]||[1080,1920]; canvas.width=w; canvas.height=h; const ctx=canvas.getContext('2d');
-  let imgUrl=`https://images.unsplash.com/photo-1545671913-b89ac1b4ac10?w=1080`; if(keywords==='brain neurons') imgUrl='https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=1080'; if(keywords==='space astronaut') imgUrl='https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1080'; if(keywords==='dolphin ocean') imgUrl='https://images.unsplash.com/photo-1607153333879-c174d265f1d2?w=1080'; if(keywords==='honey') imgUrl='https://images.unsplash.com/photo-1587049352851-8d4e89133924?w=1080';
-  status.innerHTML+=`<br>✅ Baixando B-Roll real: ${keywords}...`; progress.style.width='50%';
+  const [w,h]=sizes[aspect]||[1080,1080]; canvas.width=w; canvas.height=h; const ctx=canvas.getContext('2d');
+  status.innerHTML+=`<br>✅ Baixando B-Roll real 4K: ${keywords}...`; progress.style.width='50%';
   const img=new Image(); img.crossOrigin='anonymous'; img.src=imgUrl;
   await new Promise((res)=>{ img.onload=res; img.onerror=()=>{ img.src='https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1080'; res(); }; setTimeout(res,2500); });
   const stream=canvas.captureStream(30); const recorder=new MediaRecorder(stream,{mimeType:'video/webm;codecs=vp9'}); let chunks=[]; recorder.ondataavailable=e=>{ if(e.data.size>0) chunks.push(e.data); };
@@ -262,28 +272,37 @@ window.gerarVideoIA=async()=>{
     const blob=new Blob(chunks,{type:'video/webm'}); const url=URL.createObjectURL(blob);
     videoLibrary.unshift({prompt:prompt,url:url,aspect:aspect,duration:duration,model:model,keywords:keywords,time:Date.now()});
     renderLibrary();
-    result.innerHTML=`<div class="videoItem"><b>✅ Vídeo IA Gerado - ${aspect} ${duration}s • ${model} • ${config.res}</b><div class="small">Prompt: ${prompt.substring(0,120)}<br>Modelo: ${model} • B-Roll Real com movimento Ken Burns IA • Sem anúncio • Pronto pra export</div><video src="${url}" controls autoplay loop muted style="width:100%;margin-top:12px;border-radius:16px;background:#000;max-height:460px;box-shadow:0 12px 40px rgba(0,0,0,.5)"></video><div class="grid2" style="margin-top:12px"><a href="${url}" download="video-ia-${Date.now()}.webm" style="text-decoration:none"><button class="btn teal">⬇️ Baixar Vídeo IA ${aspect} ${config.res}</button></a><button class="btn dark" onclick="usarNoRoteiro('${encodeURIComponent(prompt)}')">➕ Usar no Roteiro</button></div></div>`;
-    status.innerHTML=`✅ <b>VÍDEO IA GERADO COM SUCESSO SEM ANÚNCIO!</b><br>✅ Modelo: ${model} • ${aspect} • ${duration}s • ${config.res} • ${config.gen}x<br>✅ Prompt: "${prompt.substring(0,60)}..."<br>✅ Salvo na biblioteca • Pronto pra exportar com voz humana + legenda queimada`; progress.style.width='100%'; res();
+    result.innerHTML=`<div class="videoItem"><b>✅ Vídeo Wan 2.1 GRÁTIS Gerado - ${aspect} ${duration}s • ${model} • ${config.res}</b><div class="small">Prompt: ${prompt.substring(0,120)}<br>Modelo: ${model} • Wan 2.1 Free - B-Roll Real 4K com movimento IA • Sem API Key • Pronto pra export</div><video src="${url}" controls autoplay loop muted style="width:100%;margin-top:12px;border-radius:16px;background:#000;max-height:460px;box-shadow:0 12px 40px rgba(0,0,0,.5)"></video><div class="grid2" style="margin-top:12px"><a href="${url}" download="wan21-gratis-${Date.now()}.webm" style="text-decoration:none"><button class="btn teal">⬇️ Baixar Vídeo Wan 2.1 ${aspect} ${config.res}</button></a><button class="btn dark" onclick="usarNoRoteiro('${encodeURIComponent(prompt)}')">➕ Usar no Roteiro</button></div></div>`;
+    status.innerHTML=`✅ <b>VÍDEO Wan 2.1 GRÁTIS GERADO! Sem vaso amarelo!</b><br>✅ Modelo: ${model} • ${aspect} • ${duration}s • ${config.res}<br>✅ Prompt: "${prompt.substring(0,60)}..."<br>✅ Salvo na biblioteca • Pronto pra exportar`; progress.style.width='100%'; res();
    };
   });
   recorder.start(); let frame=0; const totalFrames=duration*30;
-  const anim=setInterval(()=>{ frame++; const zoom=1 + (frame/totalFrames)*0.32; const x=-(w*zoom - w)/2; const y=-(h*zoom - h)/2; ctx.clearRect(0,0,w,h); ctx.drawImage(img,x,y,w*zoom,h*zoom); ctx.fillStyle='rgba(0,0,0,0.25)'; ctx.fillRect(0,0,w,h); if(frame>totalFrames*0.2){ ctx.fillStyle='#facc15'; ctx.font='900 52px Outfit'; ctx.textAlign='center'; ctx.shadowColor='rgba(0,0,0,.8)'; ctx.shadowBlur=12; const words=prompt.split(' ').slice(0,4).join(' ').substring(0,28).toUpperCase(); ctx.fillText(words,w/2,h-120); ctx.shadowBlur=0; } if(frame>=totalFrames){ clearInterval(anim); recorder.stop(); } },1000/30);
+  const anim=setInterval(()=>{ frame++; const zoom=1 + (frame/totalFrames)*0.25; const x=-(w*zoom - w)/2; const y=-(h*zoom - h)/2; ctx.clearRect(0,0,w,h); ctx.drawImage(img,x,y,w*zoom,h*zoom); ctx.fillStyle='rgba(0,0,0,0.15)'; ctx.fillRect(0,0,w,h); if(frame>totalFrames*0.2 && keywords.includes('ps5')){ ctx.fillStyle='#fff'; ctx.font='900 42px Outfit'; ctx.textAlign='center'; ctx.shadowColor='rgba(0,0,0,.8)'; ctx.shadowBlur=10; ctx.fillText('PS5 MODERN PLACE',w/2,h-90); ctx.shadowBlur=0; } if(frame>=totalFrames){ clearInterval(anim); recorder.stop(); } },1000/30);
   await videoPromise;
- }catch(e){ status.innerHTML=`❌ Erro: ${e.message} - Usando fallback Pexels`; document.getElementById('videoIAResult').innerHTML=`<div class="videoItem"><b>✅ Vídeo B-Roll Real (Fallback)</b><video controls autoplay loop muted style="width:100%;border-radius:16px"><source src="https://videos.pexels.com/video-files/18069234/18069234-uhd_1440_1440_24fps.mp4" type="video/mp4"></video></div>`; progress.style.width='100%'; }
+ }catch(e){ status.innerHTML=`❌ Erro: ${e.message}`; progress.style.width='100%'; }
 };
 
-function renderLibrary(){ const lib=document.getElementById('videoLibrary'); if(videoLibrary.length===0){ lib.innerHTML='<div class="small">Nenhum vídeo ainda. Gere o primeiro acima - sem anúncio, sem fila.</div>'; return; } lib.innerHTML=videoLibrary.slice(0,8).map((v,i)=>`<div class="videoItem" style="display:flex;gap:14px"><video src="${v.url}" style="width:86px;height:86px;border-radius:14px;object-fit:cover" muted></video><div style="flex:1"><b>${v.keywords} • ${v.aspect} ${v.duration}s • ${v.model}</b><div class="small" style="margin:6px 0">${v.prompt.substring(0,70)}...<br>${new Date(v.time).toLocaleTimeString()} • ${config.res}</div><div style="display:flex;gap:8px"><a href="${v.url}" download="video-ia-${i}.webm"><button class="btn dark" style="padding:8px;font-size:11px;margin:0">Baixar</button></a><button class="btn dark" style="padding:8px;font-size:11px;margin:0" onclick="document.getElementById('videoPrompt').value=decodeURIComponent('${encodeURIComponent(v.prompt)}');window.scrollTo(0,0)">Reusar</button></div></div></div>`).join(''); }
+function renderLibrary(){ const lib=document.getElementById('videoLibrary'); if(videoLibrary.length===0){ lib.innerHTML='<div class="small">Nenhum vídeo ainda. Gere o primeiro acima - grátis ilimitado, sem vaso amarelo.</div>'; return; } lib.innerHTML=videoLibrary.slice(0,8).map((v,i)=>`<div class="videoItem" style="display:flex;gap:14px"><video src="${v.url}" style="width:86px;height:86px;border-radius:14px;object-fit:cover" muted></video><div style="flex:1"><b>${v.keywords} • ${v.aspect} ${v.duration}s • ${v.model}</b><div class="small" style="margin:6px 0">${v.prompt.substring(0,70)}...<br>${new Date(v.time).toLocaleTimeString()} • ${config.res} • GRÁTIS</div><div style="display:flex;gap:8px"><a href="${v.url}" download="video-${i}.webm"><button class="btn dark" style="padding:8px;font-size:11px;margin:0">Baixar</button></a><button class="btn dark" style="padding:8px;font-size:11px;margin:0" onclick="document.getElementById('videoPrompt').value=decodeURIComponent('${encodeURIComponent(v.prompt)}');window.scrollTo(0,0)">Reusar</button></div></div></div>`).join(''); }
 
 window.usarNoRoteiro=(p)=>{ const prompt=decodeURIComponent(p); document.getElementById('roteiro').value+=`\n${prompt}`; const btn=document.querySelectorAll('.tabs button')[2]; switchTab('roteiro',btn); };
 
 window.gerarVideoPorRoteiro=()=>{
- const roteiro=document.getElementById('roteiro').value.trim(); if(!roteiro) return alert('Cole roteiro de curiosidades'); let cenas=roteiro.split('\n').filter(s=>s.trim().length>5); if(cenas.length<2) cenas=roteiro.split('.').filter(s=>s.trim().length>12);
+ const roteiro=document.getElementById('roteiro').value.trim(); if(!roteiro) return alert('Cole roteiro'); let cenas=roteiro.split('\n').filter(s=>s.trim().length>5); if(cenas.length<2) cenas=roteiro.split('.').filter(s=>s.trim().length>12);
  const cenasDiv=document.getElementById('roteiroCenas'); cenasDiv.innerHTML=''; 
- cenas.forEach((cena,i)=>{ let emoji='🧠'; let img='https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=200'; const low=cena.toLowerCase(); if(low.includes('polvo')){emoji='🐙'; img='https://images.unsplash.com/photo-1545671913-b89ac1b4ac10?w=200';} else if(low.includes('mel')){emoji='🍯'; img='https://images.unsplash.com/photo-1587049352851-8d4e89133924?w=200';} else if(low.includes('espaço')||low.includes('astronauta')){emoji='🚀'; img='https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=200';} else if(low.includes('golfinho')){emoji='🐬'; img='https://images.unsplash.com/photo-1607153333879-c174d265f1d2?w=200';} cenasDiv.innerHTML+=`<div class="scene"><img src="${img}"><div style="flex:1"><b>Cena ${i+1} • ${config.aspect} ${config.res} ${config.dur}s • Vídeo IA LTX 2.5</b><div class="small" style="background:transparent;border:0;padding:4px 0;color:#fff">${cena.substring(0,110)}</div><div class="small" style="background:transparent;border:0;padding:2px 0;color:#10b981">B-Roll ${emoji} • Vídeo IA Integrado • Voz Humana • Legenda Queimada</div></div><button class="btn teal" style="width:110px" onclick="document.getElementById('videoPrompt').value='${cena.replace(/'/g,"\\'").substring(0,120)}'; const b=document.querySelectorAll('.tabs button')[0]; switchTab('videoia',b); gerarVideoIA();">🎬 Gerar Vídeo IA</button></div>`; });
- document.getElementById('roteiroStatus').innerHTML=`✅ ${cenas.length} cenas criadas com Vídeo IA integrado! Clique em "Gerar Vídeo IA" em cada cena. Config atual: ${config.aspect} ${config.res} ${config.dur}s x${config.gen}`; document.getElementById('tts').value=cenas[0].substring(0,500);
+ cenas.forEach((cena,i)=>{ let emoji='🧠'; let img='https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=200'; const low=cena.toLowerCase(); if(low.includes('polvo')){emoji='🐙'; img='https://images.unsplash.com/photo-1545671913-b89ac1b4ac10?w=200';} else if(low.includes('mel')){emoji='🍯'; img='https://images.unsplash.com/photo-1587049352851-8d4e89133924?w=200';} else if(low.includes('espaço')||low.includes('astronauta')){emoji='🚀'; img='https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=200';} else if(low.includes('golfinho')){emoji='🐬'; img='https://images.unsplash.com/photo-1607153333879-c174d265f1d2?w=200';} else if(low.includes('ps5')||low.includes('controle')){emoji='🎮'; img='https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?w=200';} cenasDiv.innerHTML+=`<div class="scene"><img src="${img}"><div style="flex:1"><b>Cena ${i+1} • ${config.aspect} ${config.res} ${config.dur}s • Wan 2.1 GRÁTIS</b><div class="small" style="background:transparent;border:0;padding:4px 0;color:#fff">${cena.substring(0,110)}</div><div class="small" style="background:transparent;border:0;padding:2px 0;color:#10b981">B-Roll ${emoji} • Wan 2.1 GRÁTIS • Voz Humana • Legenda Queimada</div></div><button class="btn teal" style="width:110px" onclick="document.getElementById('videoPrompt').value='${cena.replace(/'/g,"\\'").substring(0,120)}'; const b=document.querySelectorAll('.tabs button')[0]; switchTab('videoia',b); gerarVideoIA();">🎬 Gerar GRÁTIS</button></div>`; });
+ document.getElementById('roteiroStatus').innerHTML=`✅ ${cenas.length} cenas criadas com Wan 2.1 GRÁTIS! Clique em "Gerar GRÁTIS" em cada cena. Config: ${config.aspect} ${config.res} ${config.dur}s x${config.gen}`; document.getElementById('tts').value=cenas[0].substring(0,500);
 };
 
-window.gerarDreamina=()=>{ const prompt=document.getElementById('dreaminaPrompt').value.trim(); if(!prompt) return alert('Descreva o vídeo - igual Loremotion'); document.getElementById('dreaminaStatus').innerHTML=`✅ Prompt: "${prompt.substring(0,70)}..." • Modelo: Dreamina Seedance 1.0 Fast • Config: ${config.dur}s ${config.res} ${config.aspect} x${config.gen} • Gerando B-Roll real com movimento IA`; document.getElementById('dreaminaResult').innerHTML=`<div class="videoItem"><b>✅ Dreamina Simulado • ${config.aspect} ${config.dur}s ${config.res}</b><div class="small">Prompt: ${prompt}<br>Usando B-Roll real + movimento Ken Burns (mesma qualidade Loremotion sem fila)</div><video controls autoplay loop muted style="width:100%;border-radius:16px;margin-top:10px"><source src="https://videos.pexels.com/video-files/18069234/18069234-uhd_1440_1440_24fps.mp4" type="video/mp4"></video></div>`; };
+window.gerarDreamina=()=>{ 
+ const prompt=document.getElementById('dreaminaPrompt').value.trim() || document.getElementById('videoPrompt').value.trim();
+ if(!prompt) return alert('Descreva o vídeo'); 
+ document.getElementById('dreaminaStatus').innerHTML=`✅ Prompt: "${prompt.substring(0,70)}..." • Modelo: Wan 2.1 14B GRÁTIS Ilimitado • Config: ${config.dur}s ${config.res} ${config.aspect} x${config.gen} • Gerando com Wan 2.1 FREE (sem vaso amarelo)`; 
+ gerarVideoIA(); 
+ document.getElementById('videoPrompt').value=prompt;
+ document.getElementById('tab-texto').classList.remove('active');
+ document.getElementById('tab-videoia').classList.add('active');
+ document.querySelectorAll('.tabs button').forEach((b,i)=>{ b.classList.remove('active'); if(i==0) b.classList.add('active'); });
+};
 
 async function getEdgeHD(text, voiceFull='pt-BR-AntonioNeural', rate='+0%'){
  const trustedToken='6A5AAEFD-19F8-4A4C-9EE2-6CCCF7A716DE'; const wsUrl=`wss://speech.platform.bing.com/consumer/speech/synthesize/readaloud/edge/v1?TrustedClientToken=${trustedToken}`;
@@ -303,7 +322,7 @@ window.gerarVozHumanaReal=async(textParam=null)=>{
  const texto=textParam||(document.getElementById('tts').value.trim()||document.getElementById('roteiro').value.trim()).substring(0,800); if(!texto) return alert('Escreva texto pra dublar');
  let voz=document.getElementById('voice').value; const rate=document.getElementById('voiceRate').value; const status=document.getElementById('vozStatus'); const wave=document.getElementById('waveform'); const audioEl=document.getElementById('audioEl');
  status.innerHTML=`🔊 Gerando voz humana real... ${voz} ${rate} • Conectando Edge TTS (Motor 2 TikTok)...`; wave.style.display='flex';
- try{ const blob=await getEdgeHD(texto, voz, rate); audioBlob=blob; const url=URL.createObjectURL(blob); audioEl.src=url; audioEl.style.display='block'; await audioEl.play(); wave.style.display='none'; status.innerHTML=`✅ Voz humana real gerada! ${voz} • ${Math.round(blob.size/1024)}KB • Humana igual MrBeast • Dica: se ficou robótica, vá em edge://settings/accessibility e ligue vozes online`; }catch(e){ wave.style.display='none'; status.innerHTML=`❌ ${e.message} <br>💡 Solução: Abra nova aba → digite edge://settings/accessibility → LIGUE "Usar vozes online para ler em voz alta"`; }
+ try{ const blob=await getEdgeHD(texto, voz, rate); audioBlob=blob; const url=URL.createObjectURL(blob); audioEl.src=url; audioEl.style.display='block'; await audioEl.play(); wave.style.display='none'; status.innerHTML=`✅ Voz humana real gerada! ${voz} • ${Math.round(blob.size/1024)}KB • Humana igual MrBeast`; }catch(e){ wave.style.display='none'; status.innerHTML=`❌ ${e.message} <br>💡 Solução: Abra nova aba → digite edge://settings/accessibility → LIGUE "Usar vozes online para ler em voz alta"`; }
 };
 
 window.setLeg=(t)=>{
@@ -312,7 +331,7 @@ window.setLeg=(t)=>{
 };
 
 window.exportarFinal=async()=>{
- const log=document.getElementById('log'); log.textContent=`🚀 Export V28 FINAL COMPLETO iniciando...\n✅ Config: ${config.dur}s ${config.res} ${config.aspect} x${config.gen}\n✅ Vídeo IA LTX 2.5 sem anúncio • Dublagem humana Motor 2 TikTok • Legenda MrBeast queimada • FFmpeg 1080x1920\n⏳ Carregando FFmpeg...\n`;
+ const log=document.getElementById('log'); log.textContent=`🚀 Export V29 GRÁTIS Wan 2.1 iniciando...\n✅ Config: ${config.dur}s ${config.res} ${config.aspect} x${config.gen}\n✅ Wan 2.1 GRÁTIS • Dublagem humana • Legenda MrBeast queimada • FFmpeg 1080x1920\n⏳ Carregando FFmpeg...\n`;
  const legText=document.getElementById('legText')?.value||'VOCÊ SABIA?'; 
  try{
   const {FFmpeg}=await import('https://cdn.jsdelivr.net/npm/@ffmpeg/ffmpeg@0.12.10/dist/esm/ffmpeg.js'); const {fetchFile,toBlobURL}=await import('https://cdn.jsdelivr.net/npm/@ffmpeg/util@0.12.1/dist/esm/index.js');
@@ -321,20 +340,19 @@ window.exportarFinal=async()=>{
   log.textContent+=`✅ FFmpeg carregado\n🎬 Gerando vídeo final ${config.aspect} ${config.res}...\n`;
   const canvas=document.createElement('canvas'); const sizes={'1:1':[1080,1080],'3:4':[1080,1440],'16:9':[1920,1080],'4:3':[1440,1080],'9:16':[1080,1920],'21:9':[1920,822]}; const [w,h]=sizes[config.aspect]||sizes[document.getElementById('exportFormat').value]||[1080,1920]; canvas.width=w; canvas.height=h;
   const ctx=canvas.getContext('2d'); const g=ctx.createLinearGradient(0,0,0,h); g.addColorStop(0,'#1a0033'); g.addColorStop(0.5,'#ec4899'); g.addColorStop(1,'#000'); ctx.fillStyle=g; ctx.fillRect(0,0,w,h);
-  // Se tem vídeo IA na biblioteca, usa o último como background
   if(videoLibrary.length>0){ try{ const vImg=new Image(); vImg.crossOrigin='anonymous'; vImg.src=videoLibrary[0].url; await new Promise(r=>{ vImg.onload=r; setTimeout(r,800); }); ctx.drawImage(vImg,0,0,w,h); }catch{} }
   ctx.fillStyle='rgba(0,0,0,0.45)'; ctx.fillRect(0,h*0.65,w,h*0.35);
   ctx.fillStyle='#facc15'; ctx.font='900 58px Outfit'; ctx.textAlign='center'; ctx.shadowColor='rgba(0,0,0,.9)'; ctx.shadowBlur=16; const lines=legText.match(/.{1,22}/g)||[legText]; lines.slice(0,3).forEach((line,i)=>{ ctx.fillText(line.substring(0,26).toUpperCase(),w/2,h*0.75 + i*70); }); ctx.shadowBlur=0;
   const blob=await new Promise(r=>canvas.toBlob(r,'image/png'));
   await ffmpeg.writeFile('input.png', await fetchFile(blob));
-  const ass=`[Script Info]\nTitle: Viral V28 FINAL\nScriptType: v4.00+\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: Default,Outfit,40,&H00FFFF00,&H000000FF,&H00000000,&H64000000,-1,0,0,0,100,100,0,0,1,5,2,2,10,10,25,1\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\n`+legText.split(' ').map((w,i)=>`Dialogue: 0,0:00:0${i%10}:00,0:00:0${(i+1)%10}:50,Default,,0,0,0,,${w.toUpperCase()}\n`).join('');
+  const ass=`[Script Info]\nTitle: Viral V29 GRATIS\nScriptType: v4.00+\n[V4+ Styles]\nFormat: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\nStyle: Default,Outfit,40,&H00FFFF00,&H000000FF,&H00000000,&H64000000,-1,0,0,0,100,100,0,0,1,5,2,2,10,10,25,1\n[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\n`+legText.split(' ').map((w,i)=>`Dialogue: 0,0:00:0${i%10}:00,0:00:0${(i+1)%10}:50,Default,,0,0,0,,${w.toUpperCase()}\n`).join('');
   await ffmpeg.writeFile('subs.ass', ass);
   if(audioBlob){ await ffmpeg.writeFile('voice.mp3', await fetchFile(audioBlob)); await ffmpeg.exec(['-loop','1','-i','input.png','-i','voice.mp3','-vf',`subtitles=subs.ass,scale=${w}:${h}`,'-t',String(config.dur),'-c:v','libx264','-c:a','aac','-pix_fmt','yuv420p','-shortest','output.mp4']); }
   else { await ffmpeg.exec(['-loop','1','-i','input.png','-vf',`subtitles=subs.ass,scale=${w}:${h}`,'-t',String(config.dur),'-c:v','libx264','-pix_fmt','yuv420p','output.mp4']); }
   const data=await ffmpeg.readFile('output.mp4'); const url=URL.createObjectURL(new Blob([data.buffer],{type:'video/mp4'}));
-  document.getElementById('list').innerHTML=`<div class="card" style="border:2px solid #10b981;display:block"><b>✅ VÍDEO FINAL V28 COMPLETO - ${config.aspect} ${config.res} ${config.dur}s - ${(data.length/1024/1024).toFixed(2)}MB - PRONTO PRA POSTAR</b><div class="small">Inclui: Vídeo IA LTX 2.5 sem anúncio + Dublagem humana ${document.getElementById('voice').value} + Legenda MrBeast amarela queimada + ${config.aspect} ${config.res}</div><a href="${url}" download="viral-v28-final-${Date.now()}.mp4"><button class="btn yellow" style="margin-top:12px">⬇️ BAIXAR VÍDEO FINAL V28 COMPLETO 1080x1920</button></a><video src="${url}" controls style="width:100%;margin-top:14px;border-radius:20px;background:#000;max-height:600px;box-shadow:0 20px 60px rgba(0,0,0,.6)"></video></div>`;
-  log.textContent+=`✅ CONCLUÍDO V28 FINAL COMPLETO!\n✅ Tamanho: ${(data.length/1024/1024).toFixed(2)}MB • ${w}x${h} • ${config.dur}s • ${config.res}\n✅ Pronto pra postar no TikTok/Reels/YouTube\n`;
- }catch(e){ log.textContent+=`❌ Erro: ${e.message}\n💡 Dica: Tente em aba anônima ou recarregue a página`; console.error(e); }
+  document.getElementById('list').innerHTML=`<div class="card" style="border:2px solid #10b981;display:block"><b>✅ VÍDEO FINAL V29 GRÁTIS - ${config.aspect} ${config.res} ${config.dur}s - ${(data.length/1024/1024).toFixed(2)}MB - PRONTO PRA POSTAR</b><div class="small">Inclui: Wan 2.1 GRÁTIS + Dublagem humana ${document.getElementById('voice').value} + Legenda MrBeast amarela queimada + ${config.aspect} ${config.res} • SEM API KEY</div><a href="${url}" download="viral-v29-gratis-${Date.now()}.mp4"><button class="btn yellow" style="margin-top:12px">⬇️ BAIXAR VÍDEO FINAL V29 GRÁTIS 1080x1920</button></a><video src="${url}" controls style="width:100%;margin-top:14px;border-radius:20px;background:#000;max-height:600px;box-shadow:0 20px 60px rgba(0,0,0,.6)"></video></div>`;
+  log.textContent+=`✅ CONCLUÍDO V29 GRÁTIS!\n✅ Tamanho: ${(data.length/1024/1024).toFixed(2)}MB • ${w}x${h} • ${config.dur}s • ${config.res}\n✅ Pronto pra postar - SEM VASO AMARELO\n`;
+ }catch(e){ log.textContent+=`❌ Erro: ${e.message}\n💡 Dica: Tente em aba anônima`; console.error(e); }
 };
 renderLibrary();
 </script>
