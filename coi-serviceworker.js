@@ -1,0 +1,2 @@
+// https://github.com/gzuidhof/coi-serviceworker
+!function(){var t="coi",e="coi-id",i=navigator.serviceWorker;if(i){var o={};i.addEventListener("message",function(i){var n=i.data;if(n&&n.type===t){var a=n.id;if(a&&o[a]){var r=o[a];r(n),delete o[a]}}});var n=function(t){return new Promise(function(e){var i=Math.random().toString(36).substr(2,9);o[i]=e,t.postMessage({type:t,id:i})})};i.register("coi-serviceworker.js").then(function(t){t.active&&t.active.postMessage({type:"coi"})})}}();
